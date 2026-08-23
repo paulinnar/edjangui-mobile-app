@@ -1,0 +1,25 @@
+{
+  "mobile": {
+    "tabs": {
+      "tontines": "Tontines",
+      "contributions": "Cotisations",
+      "mailbox": "Messages",
+      "profile": "Profil"
+    },
+    "placeholder": {
+      "title": "Bientôt disponible",
+      "body": "Cet écran attend les routes `/api/v1/*` de l'app web. Le socle — connexion, thème, navigation — est en place."
+    },
+    "profile": {
+      "signedInAs": "Connecté en tant que",
+      "appearance": "Apparence",
+      "language": "Langue",
+      "themeMode": {
+        "system": "Système",
+        "light": "Clair",
+        "dark": "Sombre"
+      },
+      "memberScope": "Cette application n'affiche que vos données de membre, même si votre compte administre une tontine."
+    }
+  }
+}

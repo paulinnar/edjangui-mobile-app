@@ -1,0 +1,1796 @@
+{
+  "app": {
+    "name": "Tontiin",
+    "tagline": "La gestion de vos tontines, enfin limpide."
+  },
+  "common": {
+    "actions": {
+      "save": "Enregistrer",
+      "saving": "Enregistrement…",
+      "cancel": "Annuler",
+      "close": "Fermer",
+      "create": "Créer",
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "copy": "Copier",
+      "copied": "Copié",
+      "back": "Retour",
+      "continue": "Continuer",
+      "loading": "Chargement…",
+      "search": "Rechercher"
+    },
+    "labels": {
+      "email": "Adresse e-mail",
+      "password": "Mot de passe",
+      "fullName": "Nom complet",
+      "username": "Nom d'utilisateur",
+      "role": "Rôle",
+      "country": "Pays",
+      "status": "Statut",
+      "createdAt": "Créé le",
+      "expiresAt": "Expire le",
+      "amount": "Montant",
+      "currency": "Devise",
+      "member": "Membre",
+      "members": "Membres",
+      "none": "Aucun"
+    },
+    "roles": {
+      "SUPER_ADMIN": "Super-administrateur",
+      "TONTINE_ADMIN": "Administrateur",
+      "MEMBER": "Membre"
+    },
+    "errors": {
+      "unexpected": "Une erreur inattendue est survenue. Réessayez.",
+      "unauthorized": "Vous n'avez pas accès à cette ressource.",
+      "required": "Ce champ est obligatoire."
+    },
+    "language": "Langue",
+    "theme": "Changer de thème",
+    "menu": "Menu",
+    "soon": "À venir"
+  },
+  "landing": {
+    "nav": {
+      "features": "Fonctionnalités",
+      "solutions": "Membre & administrateur",
+      "menu": "Ouvrir le menu",
+      "pricing": "Tarifs",
+      "trust": "Confiance"
+    },
+    "hero": {
+      "badge": "Gestion moderne et transparente des tontines",
+      "title": "Digitalisez vos tontines communautaires en toute simplicité.",
+      "subtitle": "Tontiin allie la confiance de la tontine traditionnelle à la rigueur d'un outil de suivi : tours, cagnotte, fond de caisse, pénalités, solidarité et caisse de prêt — au même endroit, visibles par tous les membres.",
+      "cta": "Se connecter",
+      "ctaRegister": "Créer un compte",
+      "ctaSecondary": "Voir l'espace administrateur",
+      "note": "Créez votre compte pour lancer votre tontine, ou rejoignez-en une via le lien d'invitation de votre administrateur."
+    },
+    "stats": {
+      "transparency": {
+        "value": "100%",
+        "label": "Transparent"
+      },
+      "encryption": {
+        "value": "100%",
+        "label": "Données chiffrées"
+      },
+      "modules": {
+        "value": "+6",
+        "label": "Modules de suivi"
+      },
+      "history": {
+        "value": "24/7",
+        "label": "Accès à l'historique"
+      }
+    },
+    "solutions": {
+      "title": "Conçu pour les membres. Pensé pour les administrateurs.",
+      "subtitle": "Basculez entre la vue simplifiée du cotisant et le tableau de bord complet de gestion des groupes.",
+      "member": {
+        "tab": "Espace membre",
+        "title": "Une lisibilité totale, sur mobile",
+        "description": "Chaque membre suit ses cotisations, son score, son fond de caisse et la date de son passage à la cagnotte, sans avoir à demander quoi que ce soit.",
+        "points": [
+          "Ordre de passage et tour en cours consultables à tout moment",
+          "Pénalités et scores visibles par tous, sans exception",
+          "Historique des cotisations et des prêts conservé tour après tour"
+        ],
+        "preview": {
+          "potLabel": "Cagnotte du tour",
+          "potValue": "500 000 FCFA",
+          "beneficiaryLabel": "Bénéficiaire du mois",
+          "beneficiaryName": "Aminata K.",
+          "contributionLabel": "Cotisation mensuelle",
+          "contributionNote": "Échéance le 5 du mois",
+          "contributionStatus": "À jour",
+          "action": "Voir mon tour"
+        }
+      },
+      "admin": {
+        "tab": "Espace administrateur",
+        "title": "Le contrôle complet de vos tontines",
+        "description": "Configurez les tours, l'ordre de passage, les pénalités et la caisse de prêt. Invitez vos membres par lien unique et gardez une trace de chaque opération.",
+        "points": [
+          "Plusieurs tontines gérées en parallèle depuis un seul compte",
+          "Pénalités, solidarité et renflouements appliqués en quelques clics",
+          "Invitations à usage unique, sans échange de mot de passe"
+        ],
+        "preview": {
+          "url": "tontiin.app/dashboard",
+          "role": "Administrateur",
+          "tontinesLabel": "Tontines actives",
+          "tontinesValue": "3 tontines",
+          "collectionLabel": "Cotisations à jour",
+          "collectionValue": "92%",
+          "activityLabel": "Dernières activités",
+          "statusLabel": "Statut",
+          "activityDone": "Groupe Solidarité — cagnotte versée",
+          "activityDoneStatus": "Validé",
+          "activityPending": "Groupe Commerce — fond de caisse à renflouer",
+          "activityPendingStatus": "En attente"
+        }
+      }
+    },
+    "features": {
+      "title": "Tout ce dont vous avez besoin pour vos tontines",
+      "subtitle": "Fini les cahiers perdus, les oublis et les contestations de fin de tour.",
+      "rounds": {
+        "title": "Tours & cagnotte",
+        "description": "Créez un tour, fixez la cotisation mensuelle et attribuez manuellement l'ordre de passage."
+      },
+      "scoring": {
+        "title": "Scoring transparent",
+        "description": "Chaque membre démarre à 0 et voit les pénalités de tous les autres. Remise à zéro à chaque nouveau tour."
+      },
+      "solidarity": {
+        "title": "Solidarité",
+        "description": "Événements à montant fixe, prélevés sur le fond de caisse de tous les membres sauf le bénéficiaire."
+      },
+      "loans": {
+        "title": "Caisse de prêt",
+        "description": "Caisse indépendante, intérêts précomptés au décaissement, remboursement unique à l'échéance."
+      },
+      "reserve": {
+        "title": "Fond de caisse",
+        "description": "Chaque membre alimente son fond de caisse ; prélèvements et renflouements y sont tracés au franc près."
+      },
+      "invitations": {
+        "title": "Invitations",
+        "description": "Un lien unique, valable quelques heures et utilisable une seule fois, pour faire entrer un membre dans la tontine."
+      }
+    },
+    "trust": {
+      "eyebrow": "Confiance",
+      "title": "La caisse n'est jamais entre les mains d'une seule personne.",
+      "subtitle": "Chaque geste laisse une trace, et chaque tour se clôture par un rapport remis au groupe. C'est ce qui sépare une tontine tenue dans un cahier d'une tontine tenue par Tontiin.",
+      "audit": {
+        "title": "Journal d'audit",
+        "description": "Chaque montant saisi, modifié ou annulé laisse une ligne datée et signée. Personne ne réécrit l'histoire du groupe — pas même l'administrateur.",
+        "points": [
+          "Consultable par tous les membres",
+          "Une ligne écrite ne s'efface jamais"
+        ]
+      },
+      "report": {
+        "title": "Rapport de fin de tour",
+        "description": "À la clôture de chaque tour, le bilan complet est généré et partagé : cotisations, bénéficiaire, pénalités, solde de caisse.",
+        "points": [
+          "Généré automatiquement à la clôture du tour",
+          "Consultable et exportable par tous les membres",
+          "Un historique complet, tour après tour"
+        ],
+        "preview": {
+          "title": "Tour 4 · Mars 2026",
+          "badge": "PDF",
+          "rows": [
+            {
+              "label": "Cotisations collectées",
+              "value": "480 000 FCFA"
+            },
+            {
+              "label": "Bénéficiaire",
+              "value": "Awa T."
+            },
+            {
+              "label": "Pénalités de retard",
+              "value": "7 500 FCFA"
+            },
+            {
+              "label": "Solde de caisse",
+              "value": "152 000 FCFA"
+            }
+          ]
+        }
+      },
+      "log": {
+        "entries": [
+          {
+            "action": "Cagnotte de mars validée",
+            "actor": "Awa T.",
+            "time": "il y a 2 min"
+          },
+          {
+            "action": "Pénalité de retard annulée",
+            "actor": "Ibrahim K.",
+            "time": "il y a 1 h"
+          },
+          {
+            "action": "Fond de caisse renfloué",
+            "actor": "Nadia M.",
+            "time": "hier"
+          }
+        ]
+      }
+    },
+    "pricing": {
+      "title": "Un tarif simple, à la taille de votre tontine.",
+      "subtitle": "Commencez gratuitement, passez au Premium quand votre groupe grandit.",
+      "badge": "Le plus choisi",
+      "note": "Aucun moyen de paiement demandé pour créer votre compte.",
+      "free": {
+        "name": "Free",
+        "price": "0 FCFA",
+        "period": "pour toujours",
+        "description": "De quoi lancer une première tontine et prendre ses marques.",
+        "features": [
+          "1 tontine active, jusqu'à 10 membres",
+          "Tours, cagnotte, fond de caisse et caution",
+          "Messagerie et invitations par lien unique",
+          "Tableau de bord de vos engagements",
+          "Aucun moyen de paiement demandé"
+        ],
+        "cta": "Commencer gratuitement"
+      },
+      "premium": {
+        "name": "Premium",
+        "price": "5 000 FCFA",
+        "period": "par mois, par tontine",
+        "description": "Pour les groupes qui grandissent et gèrent de l'argent sérieusement.",
+        "features": [
+          "50 membres et plus",
+          "Rapport de fin de tour et export",
+          "Solidarité, prêts et investissements",
+          "Historique complet et scoring des membres",
+          "Payable depuis le fond de caisse"
+        ],
+        "cta": "Passer au Premium"
+      },
+      "comparison": {
+        "title": "Le comparatif détaillé",
+        "summary": "Voir le comparatif détaillé",
+        "columns": {
+          "feature": "Fonctionnalité",
+          "free": "Gratuit",
+          "premium": "Premium"
+        },
+        "soon": "À venir",
+        "groups": [
+          {
+            "name": "Tontine et tours",
+            "rows": [
+              {
+                "label": "Tontines dont vous êtes administrateur",
+                "free": "1",
+                "premium": "Illimité"
+              },
+              {
+                "label": "Participation comme membre",
+                "free": "Illimité",
+                "premium": "Illimité"
+              },
+              {
+                "label": "Membres par tontine",
+                "free": "10",
+                "premium": "50 et plus"
+              },
+              {
+                "label": "Tours, cotisations et cagnotte",
+                "free": "Complet, 1 tour actif",
+                "premium": "Complet, multi-cycles"
+              },
+              {
+                "label": "Historique des tours",
+                "free": "Cycle en cours uniquement",
+                "premium": "Illimité, multi-cycles"
+              },
+              {
+                "label": "Suppression d'une tontine non active",
+                "free": "yes",
+                "premium": "Avec archivage des données"
+              },
+              {
+                "label": "Invitation par lien unique",
+                "free": "yes",
+                "premium": "yes"
+              }
+            ]
+          },
+          {
+            "name": "Argent du groupe",
+            "rows": [
+              {
+                "label": "Fond de caisse",
+                "free": "yes",
+                "premium": "yes"
+              },
+              {
+                "label": "Caution",
+                "free": "yes",
+                "premium": "yes"
+              },
+              {
+                "label": "Pénalités",
+                "free": "yes",
+                "premium": "yes"
+              },
+              {
+                "label": "Caisse de solidarité",
+                "free": "no",
+                "premium": "Décès, mariage, maladie, naissance"
+              },
+              {
+                "label": "Multi-devise et fuseaux",
+                "free": "1 devise",
+                "premium": "XAF, XOF, EUR, CAD, USD et fuseaux"
+              }
+            ]
+          },
+          {
+            "name": "Prêts et investissements",
+            "rows": [
+              {
+                "label": "Prêts",
+                "free": "no",
+                "premium": "Échéancier, intérêts, garanties"
+              },
+              {
+                "label": "Investissements",
+                "free": "no",
+                "premium": "Calcul des parts, rendement, dividendes"
+              }
+            ]
+          },
+          {
+            "name": "Vie du groupe",
+            "rows": [
+              {
+                "label": "Messagerie",
+                "free": "Texte simple",
+                "premium": "Pièces jointes, annonces épinglées, messages ciblés"
+              },
+              {
+                "label": "Évènements",
+                "free": "Présences et protocole",
+                "premium": "Présences, protocole, agenda et rappels automatiques"
+              },
+              {
+                "label": "Votes",
+                "free": "Vote simple",
+                "premium": "Vote simple, vote anonyme, quorum"
+              },
+              {
+                "label": "Rappels",
+                "free": "Notifications push",
+                "premium": "Push, plus WhatsApp et SMS via le Copilot"
+              }
+            ]
+          },
+          {
+            "name": "Suivi et rapports",
+            "rows": [
+              {
+                "label": "Scoring",
+                "free": "Par tour, sans historique",
+                "premium": "Complet, historique, classement, export, éligibilité aux prêts"
+              },
+              {
+                "label": "Rapport global sur une période",
+                "free": "no",
+                "premium": "PDF et Excel"
+              }
+            ]
+          },
+          {
+            "name": "Administration",
+            "rows": [
+              {
+                "label": "Administrateurs",
+                "free": "1",
+                "premium": "2, plus trésorier et censeur en lecture"
+              },
+              {
+                "label": "Membre virtuel (à venir)",
+                "free": "no",
+                "premium": "5 par membre"
+              },
+              {
+                "label": "Copilot AI (à venir)",
+                "free": "no",
+                "premium": "Pour les membres et les administrateurs"
+              },
+              {
+                "label": "Stockage de fichiers (à venir)",
+                "free": "500 Mo",
+                "premium": "1 Go"
+              }
+            ]
+          },
+          {
+            "name": "Produit et communauté",
+            "rows": [
+              {
+                "label": "Proposer des fonctionnalités",
+                "free": "no",
+                "premium": "yes"
+              },
+              {
+                "label": "Nouveautés en avant-première",
+                "free": "no",
+                "premium": "yes"
+              }
+            ]
+          },
+          {
+            "name": "Facturation",
+            "rows": [
+              {
+                "label": "Prélèvement sur le fond de caisse",
+                "free": "no",
+                "premium": "Après vote du groupe"
+              },
+              {
+                "label": "Mise en pause entre deux cycles",
+                "free": "no",
+                "premium": "yes"
+              },
+              {
+                "label": "Essai",
+                "free": "no",
+                "premium": "Le premier tour complet"
+              }
+            ]
+          }
+        ],
+        "included": "Inclus",
+        "excluded": "Non inclus"
+      }
+    },
+    "footer": {
+      "rights": "© {year} Tontiin. Tous droits réservés."
+    },
+    "disclaimer": "Tontiin ne gère aucun flux d'argent réel : c'est un outil de suivi et de gestion administrative."
+  },
+  "auth": {
+    "login": {
+      "title": "Connexion",
+      "subtitle": "Accédez à votre espace tontine.",
+      "submit": "Se connecter",
+      "pending": "Connexion…",
+      "noAccount": "Pas encore de compte ?",
+      "inviteOnly": "L'inscription se fait via le lien d'invitation envoyé par votre administrateur de tontine.",
+      "invalidCredentials": "E-mail ou mot de passe incorrect.",
+      "emailNotConfirmed": "Confirmez votre adresse e-mail avant de vous connecter.",
+      "forgotPassword": "Mot de passe oublié ?"
+    },
+    "forgotPassword": {
+      "title": "Mot de passe oublié",
+      "subtitle": "Indiquez votre adresse e-mail : nous vous enverrons un lien pour choisir un nouveau mot de passe.",
+      "submit": "Envoyer le lien",
+      "pending": "Envoi…",
+      "sent": "Si un compte existe avec cette adresse, un lien vient d'être envoyé.",
+      "sentTitle": "Vérifiez votre boîte mail",
+      "sentBody": "Si un compte existe avec l'adresse {email}, nous venons d'y envoyer un lien de réinitialisation. Il est valable une heure et ne sert qu'une fois.",
+      "backToLogin": "Retour à la connexion"
+    },
+    "resetPassword": {
+      "title": "Nouveau mot de passe",
+      "subtitle": "Choisissez le nouveau mot de passe du compte {email}.",
+      "newPassword": "Nouveau mot de passe",
+      "confirmPassword": "Confirmez le mot de passe",
+      "submit": "Enregistrer le mot de passe",
+      "pending": "Enregistrement…",
+      "linkExpired": "Ce lien de réinitialisation a expiré ou a déjà été utilisé. Demandez-en un nouveau.",
+      "samePassword": "Le nouveau mot de passe doit être différent de l'ancien."
+    },
+    "register": {
+      "title": "Créer un compte",
+      "subtitle": "Créez votre compte, puis votre première tontine.",
+      "submit": "Créer mon compte",
+      "pending": "Création du compte…",
+      "haveAccount": "Vous avez déjà un compte ?",
+      "emailTaken": "Un compte existe déjà avec cette adresse e-mail.",
+      "confirmEmail": "Compte créé. Confirmez votre adresse e-mail pour vous connecter.",
+      "confirmTitle": "Vérifiez votre boîte mail",
+      "confirmBody": "Votre compte est créé. Nous avons envoyé un lien de confirmation à {email} : ouvrez-le pour activer le compte, puis connectez-vous.",
+      "confirmSpam": "Rien reçu au bout de quelques minutes ? Pensez à regarder dans vos courriers indésirables.",
+      "rateLimited": "Trop d'e-mails envoyés en peu de temps. Patientez quelques minutes avant de réessayer.",
+      "cta": "Créer un compte"
+    },
+    "signout": "Se déconnecter",
+    "validation": {
+      "email": "Adresse e-mail invalide.",
+      "passwordMin": "Le mot de passe doit contenir au moins 8 caractères.",
+      "passwordMismatch": "Les deux mots de passe ne correspondent pas.",
+      "fullNameMin": "Indiquez votre nom complet (2 caractères minimum)."
+    }
+  },
+  "join": {
+    "title": "Rejoindre la tontine",
+    "subtitle": "Vous avez été invité à rejoindre {tontine}.",
+    "expiresIn": "Ce lien expire {relative}.",
+    "tabs": {
+      "signup": "Créer un compte",
+      "signin": "J'ai déjà un compte"
+    },
+    "submitSignup": "Créer mon compte et rejoindre",
+    "submitSignin": "Me connecter et rejoindre",
+    "pending": "Adhésion en cours…",
+    "success": "Bienvenue dans {tontine} !",
+    "alreadyMember": "Vous êtes déjà membre de cette tontine.",
+    "emailTaken": "Un compte existe déjà avec cette adresse e-mail. Utilisez l'onglet « J'ai déjà un compte ».",
+    "confirmEmail": "Compte créé. Confirmez votre adresse e-mail pour accéder à la tontine.",
+    "confirmTitle": "Vérifiez votre boîte mail",
+    "confirmBody": "Votre adhésion à {tontine} est enregistrée. Nous avons envoyé un lien de confirmation à {email} : ouvrez-le pour activer votre compte, puis connectez-vous.",
+    "invalid": {
+      "title": "Lien d'invitation invalide",
+      "notFound": "Ce lien d'invitation n'existe pas.",
+      "used": "Ce lien d'invitation a déjà été utilisé.",
+      "expired": "Ce lien d'invitation a expiré.",
+      "superAdmin": "Un super-administrateur ne rejoint aucune tontine. Le lien reste valable pour son destinataire.",
+      "help": "Demandez un nouveau lien à l'administrateur de votre tontine."
+    }
+  },
+  "profile": {
+    "title": "Mon profil",
+    "subtitle": "Vos informations et vos adhésions.",
+    "edit": "Modifier mon profil",
+    "editHint": "Votre nom et votre avatar, tels qu'ils apparaissent aux autres membres.",
+    "pending": "Enregistrement…",
+    "success": "Profil mis à jour.",
+    "avatar": {
+      "legend": "Avatar",
+      "hint": "Choisissez une image dans la liste. Aucun envoi de photo n'est possible.",
+      "none": "Aucun avatar — afficher mes initiales",
+      "option": "Avatar {index}"
+    },
+    "validation": {
+      "avatar": "Cet avatar ne fait pas partie de la liste proposée."
+    },
+    "identity": "Informations personnelles",
+    "memberSince": "Membre depuis",
+    "memberships": "Mes adhésions",
+    "membershipsCount": "{count, plural, =0 {Aucune tontine} one {# tontine} other {# tontines}}.",
+    "noMemberships": "Vous n'appartenez à aucune tontine pour l'instant.",
+    "joinedOn": "Adhésion le {date}"
+  },
+  "nav": {
+    "dashboard": "Tableau de bord",
+    "profile": "Mon profil",
+    "tontines": "Mes tontines",
+    "members": "Membres",
+    "rounds": "Tours",
+    "scoring": "Pénalités",
+    "solidarity": "Solidarité",
+    "cautions": "Cautions",
+    "cashReserve": "Fond de caisse",
+    "savings": "Épargne",
+    "loans": "Prêts",
+    "investments": "Investissement",
+    "internalAudit": "Audit interne",
+    "events": "Événements",
+    "polls": "Votes",
+    "mailbox": "Messagerie",
+    "invitations": "Invitations",
+    "settings": "Configuration",
+    "supervision": "Supervision",
+    "audit": "Journal",
+    "subscription": "Abonnement",
+    "payments": "Paiements",
+    "admin": "Espace super-admin",
+    "administration": "Administration",
+    "groups": {
+      "rounds": "Tours",
+      "cash": "Caisses",
+      "finance": "Finance",
+      "group": "Groupe",
+      "audit": "Audit"
+    }
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "greeting": "Bonjour {name}",
+    "yourTontines": "Vos tontines",
+    "commitments": {
+      "title": "Mes engagements du mois",
+      "empty": "Rien à verser ce mois-ci.",
+      "overdueBadge": "En retard",
+      "columns": {
+        "commitment": "Engagement",
+        "tontine": "Tontine",
+        "dueDate": "Échéance",
+        "amount": "Montant"
+      },
+      "kinds": {
+        "CONTRIBUTION": "Cotisation",
+        "CASH_RESERVE": "Fond de caisse à renflouer",
+        "CAUTION": "Caution à compléter",
+        "LOAN": "Remboursement de prêt"
+      }
+    },
+    "empty": {
+      "title": "Aucune tontine pour l'instant",
+      "description": "Créez votre première tontine, ou attendez l'invitation d'un administrateur.",
+      "cta": "Créer une tontine"
+    }
+  },
+  "admin": {
+    "title": "Espace super-administrateur",
+    "subtitle": "La plateforme vue d'ensemble : les groupes, ce qu'elle encaisse, et ce que les membres réclament.",
+    "nav": {
+      "supervision": "Supervision globale",
+      "tontines": "Tontines",
+      "payments": "Paiements",
+      "features": "Fonctionnalités"
+    },
+    "supervision": {
+      "tontines": "Tontines",
+      "members": "Membres",
+      "activeRounds": "Tours actifs",
+      "pendingInvitations": "Invitations en attente",
+      "due": "À encaisser",
+      "dueHint": "{count, plural, =0 {rien en attente} one {# paiement en attente} other {# paiements en attente}}",
+      "nothingDue": "—"
+    },
+    "tontines": {
+      "empty": "Aucune tontine sur la plateforme.",
+      "view": "Voir",
+      "columns": {
+        "name": "Tontine",
+        "plan": "Formule",
+        "members": "Membres",
+        "cashReserve": "Fond de caisse",
+        "caution": "Caution",
+        "activeRounds": "Tours actifs",
+        "createdAt": "Créée le",
+        "actions": "Action"
+      },
+      "plans": {
+        "FREE": "Gratuit",
+        "PREMIUM": "Premium"
+      }
+    }
+  },
+  "tontine": {
+    "create": {
+      "title": "Créer une tontine",
+      "subtitle": "Vous en deviendrez l'administrateur.",
+      "name": "Nom de la tontine",
+      "namePlaceholder": "Ex : Tontine des Amis de Douala",
+      "joiningFee": "Caution d'adhésion",
+      "cashReserve": "Fond de caisse mensuel",
+      "whatsappGroup": "Groupe WhatsApp (facultatif)",
+      "whatsappGroupPlaceholder": "https://chat.whatsapp.com/…",
+      "whatsappGroupHint": "Lien d'invitation du groupe. Laissez vide si votre tontine n'en a pas : vous pourrez l'ajouter plus tard depuis la configuration.",
+      "submit": "Créer la tontine",
+      "pending": "Création…",
+      "success": "Tontine créée.",
+      "superAdminRefused": "Un super-administrateur ne peut pas créer de tontine : il en deviendrait l'administrateur.",
+      "countryPlaceholder": "Choisissez un pays"
+    },
+    "card": {
+      "caution": "Caution",
+      "cashReserve": "Fond de caisse"
+    },
+    "whatsappGroup": {
+      "open": "Groupe WhatsApp",
+      "scanTitle": "Scannez pour rejoindre le groupe WhatsApp",
+      "scanHint": "Ouvrez l'appareil photo de votre téléphone et scannez ce code pour rejoindre le groupe.",
+      "join": "Rejoindre le groupe",
+      "qrLabel": "QR code du lien d'invitation au groupe WhatsApp"
+    },
+    "kpi": {
+      "members": "Membres",
+      "cashReserve": "Fond de caisse",
+      "cautions": "Cautions",
+      "loanFund": "Caisse de prêt",
+      "cashReserveHint": "Total des soldes des membres",
+      "cautionsHint": "Cautions d'adhésion versées",
+      "loanFundHint": "Capital disponible",
+      "loanFundMissing": "Non configurée"
+    },
+    "settings": {
+      "title": "Configuration de la tontine",
+      "subtitle": "Devise, cautions, fond de caisse et groupe WhatsApp.",
+      "success": "Configuration enregistrée.",
+      "currencyHint": "Déduite du pays : elle sert d'unité à tous les montants de la tontine."
+    },
+    "list": {
+      "subtitle": "{count, plural, =0 {Aucune tontine} one {# tontine} other {# tontines}} accessible."
+    },
+    "members": {
+      "title": "Membres",
+      "subtitle": "{count, plural, =0 {Aucun membre} one {# membre} other {# membres}} dans cette tontine.",
+      "columns": {
+        "member": "Membre",
+        "role": "Rôle",
+        "caution": "Caution",
+        "cashReserve": "Fond de caisse",
+        "joinedAt": "Adhésion"
+      },
+      "empty": "Aucun membre pour l'instant. Invitez votre premier membre."
+    },
+    "caution": {
+      "title": "Caution & renflouement",
+      "subtitle": "Chaque membre doit avoir versé {required} de caution d'adhésion. Enregistrez ici les compléments au fur et à mesure.",
+      "noFee": "Aucune caution d'adhésion n'est exigée dans cette tontine.",
+      "upToDate": "À jour",
+      "submit": "Compléter",
+      "pending": "Enregistrement…",
+      "amountFor": "Complément de caution versé par {name}",
+      "success": "Complément de caution enregistré.",
+      "columns": {
+        "member": "Membre",
+        "balance": "Caution versée",
+        "deficit": "Manque",
+        "action": "Complément"
+      },
+      "errors": {
+        "notMember": "Cette personne n'est pas membre de la tontine."
+      },
+      "validation": {
+        "amount": "Le montant versé doit être strictement positif."
+      }
+    },
+    "validation": {
+      "whatsappUrl": "Indiquez un lien https valide, ou laissez le champ vide.",
+      "country": "Choisissez un pays dans la liste."
+    }
+  },
+  "rounds": {
+    "title": "Tours",
+    "subtitle": "Un tour est la fenêtre sur laquelle tout se compte : cotisations, ordre de passage de la cagnotte et score. Une tontine n'a qu'un seul tour actif à la fois.",
+    "empty": "Aucun tour pour l'instant.",
+    "months": "{count, plural, one {# mois} other {# mois}}",
+    "create": {
+      "title": "Créer un tour",
+      "subtitle": "Le tour est créé en brouillon : vous fixez l'ordre de passage avant de l'activer.",
+      "startMonth": "Mois de départ",
+      "duration": "Durée (mois)",
+      "monthlyAmount": "Cotisation mensuelle ({currency})",
+      "codeHint": "Le code du tour est généré automatiquement à partir de la période, au format TOUR-MMAA-MMAA (ex : TOUR-0126-1226 pour janvier à décembre 2026).",
+      "submit": "Créer le tour",
+      "pending": "Création…"
+    },
+    "columns": {
+      "code": "Tour",
+      "period": "Période",
+      "monthlyAmount": "Cotisation",
+      "beneficiaries": "Bénéficiaires",
+      "status": "Statut"
+    },
+    "status": {
+      "DRAFT": "Brouillon",
+      "ACTIVE": "Actif",
+      "CLOSED": "Clôturé"
+    },
+    "actions": {
+      "DRAFT": "Remettre en brouillon",
+      "ACTIVE": "Activer",
+      "CLOSED": "Clôturer"
+    },
+    "current": {
+      "title": "Tour en cours",
+      "summary": "{code} — cotisation de {amount} par mois, mois {month} sur {total}, fin le {end}.",
+      "none": "Aucun tour actif. Créez un tour pour lancer les cotisations et le scoring."
+    },
+    "detail": {
+      "open": "Ouvrir",
+      "openScoring": "Voir le scoring de ce tour",
+      "scoringHint": "Chaque membre démarre ce tour à 0 point. Les pénalités appliquées ici ne pèsent que sur ce tour.",
+      "kpi": {
+        "period": "Début",
+        "periodHint": "Fin le {date}",
+        "monthlyAmount": "Cotisation mensuelle",
+        "monthlyAmountHint": "Par membre et par mois",
+        "pot": "Cagnotte mensuelle",
+        "potHint": "{count, plural, one {# cotisant} other {# cotisants}}",
+        "progress": "Avancement",
+        "progressHint": "{count, plural, =0 {Aucun bénéficiaire désigné} one {# bénéficiaire désigné} other {# bénéficiaires désignés}}",
+        "monthOf": "Mois {month} / {total}"
+      }
+    },
+    "rotation": {
+      "title": "Ordre de passage de la cagnotte",
+      "subtitle": "Attribuez manuellement un rang à chaque membre : le n-ième bénéficiaire reçoit la cagnotte au n-ième mois du tour. Un membre sans rang n'est pas servi sur ce tour.",
+      "readonly": "L'ordre de passage est fixé par l'administrateur de la tontine.",
+      "empty": "Aucun membre dans cette tontine.",
+      "unassigned": "—",
+      "distributed": "Versée",
+      "notDistributed": "En attente",
+      "columns": {
+        "order": "Rang",
+        "member": "Membre",
+        "amount": "Somme versée",
+        "date": "Date de versement",
+        "payout": "Cagnotte"
+      },
+      "save": "Enregistrer l'ordre",
+      "pending": "Enregistrement…"
+    },
+    "contributions": {
+      "title": "Suivi des cotisations mensuelles",
+      "subtitle": "Chaque membre verse {amount} par mois. L'administrateur constate les versements mois par mois : tant qu'un mois n'est pas dépouillé, il reste en « — ».",
+      "record": "Enregistrer des versements",
+      "recordHint": "Choisissez le mois du tour {code}, puis pointez le statut de chaque membre.",
+      "month": "Mois du tour",
+      "monthOption": "Mois {index} — {label}",
+      "markAllReceived": "Tout marquer reçu",
+      "clearAll": "Tout effacer",
+      "chosen": "{chosen} / {total} renseignés",
+      "clearHint": "Recliquez sur un statut pour le retirer : le membre repasse en « non renseigné ». Les membres non renseignés ne comptent ni comme reçus ni comme en retard.",
+      "submit": "Enregistrer le mois",
+      "pending": "Enregistrement…",
+      "success": "Versements du mois enregistrés.",
+      "columns": {
+        "member": "Membre",
+        "amount": "Cotisation mensuelle"
+      },
+      "statuses": {
+        "RECEIVED": "Reçu",
+        "LATE": "Reçu en retard",
+        "MISSED": "Non reçu",
+        "NONE": "Non renseigné"
+      },
+      "errors": {
+        "outOfRange": "Ce mois dépasse la durée du tour."
+      },
+      "validation": {
+        "month": "Mois de tour invalide."
+      }
+    },
+    "success": {
+      "DRAFT": "Tour remis en brouillon.",
+      "ACTIVE": "Tour activé. Les scores repartent de 0.",
+      "CLOSED": "Tour clôturé.",
+      "rotationSaved": "Ordre de passage enregistré."
+    },
+    "errors": {
+      "duplicate": "Un tour couvre déjà exactement cette période.",
+      "notFound": "Ce tour est introuvable.",
+      "invalidTransition": "Ce changement de statut n'est pas possible depuis l'état actuel du tour.",
+      "activeExists": "Un autre tour est déjà actif. Clôturez-le ou gelez-le avant d'en activer un nouveau.",
+      "closed": "Un tour clôturé ne peut plus être modifié.",
+      "notMembers": "Un des bénéficiaires n'appartient pas à cette tontine.",
+      "outOfRange": "Un rang dépasse la durée du tour."
+    },
+    "validation": {
+      "startMonth": "Indiquez le mois de départ du tour.",
+      "duration": "La durée doit être comprise entre 1 et 60 mois.",
+      "monthlyAmount": "La cotisation mensuelle doit être positive.",
+      "order": "Rang de passage invalide.",
+      "duplicateOrder": "Deux membres ne peuvent pas occuper le même rang."
+    }
+  },
+  "scoring": {
+    "title": "Scoring",
+    "subtitle": "Chaque membre démarre le tour à {initial} et ne perd des points qu'en cas de pénalité. Le tableau est visible par tous les membres de la tontine.",
+    "resetHint": "Les scores sont propres à chaque tour : ouvrir un nouveau tour ramène tout le monde à 0, sans effacer l'historique du tour précédent.",
+    "roundSelector": "Choisir le tour",
+    "noRound": "Aucun tour créé : il n'y a pas encore de score à afficher.",
+    "fund": {
+      "total": "Caisse des pénalités",
+      "totalHint": "Cumul de tous les tours — elle ne se remet pas à zéro",
+      "penalties": "Pénalités appliquées",
+      "penaltiesHint": "{points} points retirés au total",
+      "members": "Membres pénalisés",
+      "membersHint": "Ayant au moins une pénalité financière",
+      "round": "Pénalités",
+      "roundHint": "Sur le tour affiché"
+    },
+    "debitHint": "Le montant d'une pénalité est prélevé sur le fond de caisse du membre dès son application, et restitué si elle est annulée.",
+    "columns": {
+      "member": "Membre",
+      "score": "Score",
+      "penalties": "Pénalités",
+      "amount": "Montant dû"
+    },
+    "types": {
+      "RETARD_COTISATION": "Retard de cotisation",
+      "RETARD_COMPLEMENT_FONDS": "Retard de complément du fond de caisse",
+      "RETARD_COMPLEMENT_CAUTION": "Retard de complément de caution",
+      "ABSENCE_AG": "Absence à l'assemblée générale",
+      "RETARD_REMBOURSEMENT_PRET": "Retard de remboursement de prêt"
+    },
+    "penalties": {
+      "title": "Pénalités du tour",
+      "subtitle": "Détail des pénalités appliquées sur {code}.",
+      "empty": "Aucune pénalité sur ce tour. Tous les membres sont à 0.",
+      "allTitle": "Historique des pénalités",
+      "allSubtitle": "Toutes les pénalités de la tontine, tous tours confondus.",
+      "allEmpty": "Aucune pénalité appliquée dans cette tontine.",
+      "noRound": "Hors tour",
+      "cancel": "Annuler",
+      "columns": {
+        "date": "Date",
+        "round": "Tour",
+        "member": "Membre",
+        "type": "Motif",
+        "points": "Points",
+        "amount": "Montant"
+      }
+    },
+    "form": {
+      "title": "Appliquer une pénalité",
+      "subtitle": "La pénalité est rattachée à {code} et ne pèsera que sur ce tour.",
+      "member": "Membre",
+      "type": "Motif",
+      "points": "Points retirés",
+      "pointsHint": "Valeur négative ou nulle. Le barème est proposé selon le motif et reste modifiable.",
+      "amount": "Montant financier",
+      "description": "Précision",
+      "descriptionPlaceholder": "Ex : cotisation de février versée avec 6 jours de retard",
+      "submit": "Appliquer la pénalité",
+      "pending": "Application…"
+    },
+    "success": {
+      "created": "Pénalité appliquée.",
+      "deleted": "Pénalité annulée."
+    },
+    "errors": {
+      "notFound": "Cette pénalité est introuvable."
+    },
+    "validation": {
+      "points": "Les points retirés doivent être un entier négatif ou nul.",
+      "amount": "Le montant doit être positif."
+    }
+  },
+  "solidarity": {
+    "title": "Solidarité",
+    "open": "Ouvrir la solidarité",
+    "summary": "{pending, plural, =0 {Aucun signalement en attente} one {# signalement en attente} other {# signalements en attente}} · {toReplenish, plural, =0 {aucun membre à renflouer} one {# membre à renflouer} other {# membres à renflouer}}.",
+    "penaltyDescription": "Fond de caisse non renfloué après l'événement « {event} »",
+    "kpi": {
+      "events": "Motifs au barème",
+      "eventsHint": "Montants fixes par membre",
+      "claims": "Événements signalés",
+      "claimsHint": "{count, plural, =0 {Tous prélevés} one {# en attente de prélèvement} other {# en attente de prélèvement}}",
+      "collected": "Total prélevé",
+      "collectedHint": "Sur l'ensemble des événements",
+      "toReplenish": "À renflouer",
+      "toReplenishHint": "Sous le fond de caisse requis ({amount})"
+    },
+    "events": {
+      "title": "Barème des événements",
+      "subtitle": "Chaque motif porte un montant fixe, prélevé sur le fond de caisse de chaque membre au moment du signalement. Le bénéficiaire reçoit ce montant multiplié par le nombre de contributeurs.",
+      "empty": "Aucun motif configuré. Ajoutez-en un pour pouvoir signaler un événement.",
+      "customBadge": "Personnalisé",
+      "columns": {
+        "name": "Motif",
+        "amount": "Par membre",
+        "custom": "Personnalisé",
+        "claims": "Signalements"
+      },
+      "form": {
+        "title": "Ajouter un motif",
+        "subtitle": "Naissance, mariage, décès… ou tout motif propre à votre tontine.",
+        "name": "Motif",
+        "namePlaceholder": "Ex : Naissance",
+        "amount": "Montant par membre ({currency})",
+        "amountHint": "Ce que chaque membre versera, hors bénéficiaire.",
+        "custom": "Motif exceptionnel (hors barème habituel)",
+        "submit": "Ajouter au barème",
+        "pending": "Ajout…"
+      }
+    },
+    "claims": {
+      "title": "Événements signalés",
+      "subtitle": "Le signalement ne prélève rien : l'admin le confirme, et le montant est alors retiré du fond de caisse de tous les membres sauf le bénéficiaire. Chacun a ensuite {days} jours pour renflouer.",
+      "empty": "Aucun événement signalé pour l'instant.",
+      "open": "Ouvrir",
+      "collect": "Prélevez",
+      "collectPending": "Prélèvement…",
+      "cancel": "Annuler",
+      "refund": "Annuler et restituer",
+      "dueOn": "Renflouement avant le {date}",
+      "status": {
+        "declared": "Signalé",
+        "collected": "Prélevé"
+      },
+      "columns": {
+        "event": "Événement",
+        "beneficiary": "Bénéficiaire",
+        "perMember": "Par membre",
+        "total": "Total collecté",
+        "status": "Statut"
+      },
+      "form": {
+        "title": "Signaler un événement",
+        "subtitle": "Le prélèvement n'a lieu qu'à la confirmation : vous pourrez vérifier qui paie et combien avant de le déclencher.",
+        "event": "Motif",
+        "beneficiary": "Bénéficiaire",
+        "beneficiaryHint": "Le bénéficiaire est le seul membre à ne pas être prélevé.",
+        "note": "Précision",
+        "notePlaceholder": "Ex : naissance de sa fille le 3 février",
+        "submit": "Signaler l'événement",
+        "pending": "Signalement…",
+        "noEvent": "Ajoutez d'abord un motif au barème.",
+        "noMember": "Il faut au moins deux membres : le bénéficiaire ne se finance pas lui-même."
+      }
+    },
+    "detail": {
+      "title": "Prélèvement",
+      "pending": "Signalé par {declaredBy} au profit de {beneficiary}. Voici ce que le prélèvement retirera à chaque membre une fois confirmé.",
+      "collected": "Signalé par {declaredBy} au profit de {beneficiary}, prélevé le {date}.",
+      "exempt": "{beneficiary} est le bénéficiaire : son fond de caisse n'est pas touché.",
+      "noContributor": "Aucun contributeur : le bénéficiaire est le seul membre de la tontine.",
+      "penalized": "Pénalisé",
+      "missing": "Manque {amount}",
+      "allReplenished": "Tous les contributeurs sont revenus au niveau requis.",
+      "replenishHint": "Enregistrez les renflouements au fur et à mesure. Un membre est à jour dès que son fond de caisse atteint {required}.",
+      "columns": {
+        "member": "Membre",
+        "levied": "Prélevé",
+        "balanceAfter": "Solde après prélèvement",
+        "balance": "Solde actuel",
+        "replenishment": "Renflouement"
+      },
+      "kpi": {
+        "beneficiary": "Bénéficiaire",
+        "beneficiaryHint": "Seul membre non prélevé",
+        "perMember": "Par membre",
+        "perMemberHint": "Montant fixe du motif",
+        "total": "Total",
+        "totalHint": "{count, plural, =0 {Aucun contributeur} one {# contributeur} other {# contributeurs}}",
+        "due": "Échéance",
+        "dueHint": "Renflouement attendu avant cette date",
+        "dueOverdue": "Échéance dépassée : le retard est pénalisable",
+        "duePending": "Fixée à {days} jours après le prélèvement"
+      }
+    },
+    "replenishment": {
+      "title": "Fond de caisse & renflouement",
+      "subtitle": "Après un prélèvement de solidarité, chaque membre doit ramener son fond de caisse à {required}. Passé {days} jours, le retard devient pénalisable.",
+      "upToDate": "À jour",
+      "submit": "Renflouer",
+      "pending": "Enregistrement…",
+      "amountFor": "Montant renfloué par {name}",
+      "penalize": "Pénaliser le retard",
+      "penalizePending": "Application…",
+      "columns": {
+        "member": "Membre",
+        "balance": "Fond de caisse",
+        "deficit": "Manque",
+        "action": "Renflouement"
+      }
+    },
+    "notification": {
+      "title": "Fond de caisse à renflouer",
+      "message": "L'événement « {event} » au profit de {beneficiary} a prélevé {amount} sur votre fond de caisse. Renflouez-le avant le {dueDate} pour éviter une pénalité de retard."
+    },
+    "success": {
+      "eventCreated": "Motif ajouté au barème.",
+      "eventUpdated": "Motif mis à jour.",
+      "eventDeleted": "Motif retiré du barème.",
+      "declared": "Événement signalé. Confirmez-le pour déclencher le prélèvement.",
+      "collected": "Prélèvement effectué. Les contributeurs ont été notifiés.",
+      "cancelled": "Signalement annulé. Les prélèvements ont été restitués.",
+      "replenished": "Renflouement enregistré.",
+      "penalized": "Pénalité de retard appliquée."
+    },
+    "errors": {
+      "eventNotFound": "Ce motif est introuvable.",
+      "duplicateEvent": "Un motif porte déjà ce nom dans cette tontine.",
+      "eventInUse": "Ce motif a déjà été signalé. Annulez les signalements avant de le retirer.",
+      "claimNotFound": "Cet événement signalé est introuvable.",
+      "notMember": "Cette personne n'est pas membre de la tontine.",
+      "alreadyCollected": "Le prélèvement a déjà été effectué.",
+      "noContributors": "Aucun membre à prélever : le bénéficiaire est seul dans la tontine.",
+      "notOverdue": "L'échéance de renflouement n'est pas encore dépassée.",
+      "alreadyReplenished": "Ce membre a déjà renfloué son fond de caisse.",
+      "alreadyPenalized": "Ce membre a déjà été pénalisé pour cet événement."
+    },
+    "validation": {
+      "name": "Indiquez le motif (2 caractères minimum).",
+      "amount": "Le montant par membre doit être strictement positif.",
+      "replenishAmount": "Le montant renfloué doit être strictement positif."
+    }
+  },
+  "loans": {
+    "title": "Caisse de prêt",
+    "open": "Ouvrir la caisse de prêt",
+    "configure": "Configurer la caisse",
+    "noFund": "Aucune caisse de prêt configurée. Fixez sa devise, son capital, son taux et sa durée pour commencer à prêter.",
+    "summary": "{active, plural, =0 {Aucun prêt en cours} one {# prêt en cours} other {# prêts en cours}} · {overdue, plural, =0 {aucun retard} one {# en retard} other {# en retard}} · {capital} disponibles.",
+    "penaltyDescription": "Prêt de {amount} non remboursé à l'échéance du {dueDate}",
+    "status": {
+      "PENDING": "Demande",
+      "APPROVED": "Accordé",
+      "ACTIVE": "En cours",
+      "PAID": "Remboursé",
+      "DEFAULTED": "En défaut"
+    },
+    "kpi": {
+      "capital": "Capital disponible",
+      "capitalHint": "Liquidités restant à prêter",
+      "outstanding": "Encours",
+      "outstandingHint": "{count, plural, =0 {Aucun prêt en cours} one {# prêt en cours} other {# prêts en cours}}",
+      "interest": "Intérêts précomptés",
+      "interestHint": "Retenus au décaissement, tous prêts confondus",
+      "overdue": "Échéances dépassées",
+      "overdueHint": "Prêts non remboursés à la date prévue"
+    },
+    "fund": {
+      "title": "Configuration de la caisse",
+      "subtitle": "La caisse est indépendante de la tontine : sa devise lui est propre, et ses conditions sont les mêmes pour tous les emprunteurs. Les modifier ne rejoue aucun prêt déjà décaissé.",
+      "readonly": "Caisse en {currency} · {rate} % d'intérêts précomptés · remboursement à {days} jours · pénalité de retard de {penalty} % du montant dû.",
+      "form": {
+        "currencyHint": "Elle peut différer de celle des cotisations.",
+        "capital": "Capital de la caisse",
+        "capitalHint": "Liquidités disponibles. Les décaissements et les remboursements la déplacent automatiquement.",
+        "interestRate": "Taux d'intérêt (%)",
+        "interestRateHint": "Précompté au décaissement : un prêt de 1 000 000 à 10 % verse 900 000 et en fait devoir 1 000 000.",
+        "duration": "Durée du prêt (jours)",
+        "durationHint": "Identique pour tous. Le délai part du décaissement, pas de la demande.",
+        "latePenaltyRate": "Pénalité de retard (%)",
+        "latePenaltyRateHint": "Pourcentage du montant dû, appliqué une seule fois si l'échéance est dépassée.",
+        "submit": "Créer la caisse",
+        "pending": "Enregistrement…"
+      }
+    },
+    "list": {
+      "title": "Prêts",
+      "subtitle": "Conditions en vigueur : {rate} % d'intérêts précomptés, remboursement unique à {days} jours. Chaque prêt déjà décaissé garde les siennes.",
+      "noFund": "Configurez la caisse en bas de page pour pouvoir accorder un prêt.",
+      "empty": "Aucun prêt pour l'instant.",
+      "notDisbursed": "Non décaissé",
+      "dueIn": "{days, plural, =0 {Échéance aujourd'hui} one {Dans # jour} other {Dans # jours}}",
+      "overdueBy": "{days, plural, one {# jour de retard} other {# jours de retard}}",
+      "repaidOn": "Le {date}",
+      "penalized": "Pénalisé",
+      "withPenalty": "{amount} de pénalité",
+      "columns": {
+        "member": "Emprunteur",
+        "requested": "Montant",
+        "interest": "Intérêts",
+        "disbursed": "Versé",
+        "due": "Dû",
+        "dueDate": "Échéance",
+        "status": "Statut"
+      }
+    },
+    "form": {
+      "title": "Soumettre un prêt",
+      "subtitle": "Le montant n'est pas plafonné. Rien n'est versé à ce stade : le prêt doit d'abord être accordé, puis décaissé — c'est le décaissement qui précompte les intérêts et fait courir le délai.",
+      "member": "Emprunteur",
+      "amount": "Montant demandé",
+      "amountHint": "Sans limite : c'est l'assemblée qui décide, pas l'application.",
+      "note": "Précision",
+      "notePlaceholder": "Ex : financement de son commerce, accordé en AG du 12 mars",
+      "preview": "Intérêts de {rate} % précomptés : <strong>{interest}</strong> retenus, <strong>{disbursed}</strong> versés à l'emprunteur, <strong>{due}</strong> dus en une fois dans {days} jours.",
+      "exceedsCapital": "Ce décaissement dépasse le capital disponible ({capital}) : la caisse passera en négatif.",
+      "submit": "Soumettre le prêt",
+      "pending": "Enregistrement…"
+    },
+    "actions": {
+      "approve": "Accorder",
+      "approvePending": "Enregistrement…",
+      "disburse": "Décaisser",
+      "disbursePending": "Décaissement…",
+      "repay": "Remboursement",
+      "repayPending": "Encaissement…",
+      "penalize": "Pénaliser le retard",
+      "penalizePending": "Application…"
+    },
+    "notification": {
+      "disbursedTitle": "Prêt décaissé",
+      "disbursedMessage": "Vous avez reçu {disbursed} ({interest} d'intérêts précomptés). Vous devrez rembourser {due} en une seule fois avant le {dueDate}."
+    },
+    "success": {
+      "fundSaved": "Caisse de prêt enregistrée.",
+      "created": "Prêt enregistré. Décaissez-le pour verser les fonds.",
+      "approved": "Prêt accordé. Il reste à décaisser.",
+      "disbursed": "Prêt décaissé. L'emprunteur a été notifié.",
+      "repaid": "Remboursement encaissé. Le capital est revenu en caisse.",
+      "penalized": "Pénalité de retard appliquée.",
+      "deleted": "Demande de prêt supprimée."
+    },
+    "errors": {
+      "noFund": "Aucune caisse de prêt n'est configurée pour cette tontine.",
+      "notFound": "Ce prêt est introuvable.",
+      "notMember": "Cette personne n'est pas membre de la tontine.",
+      "invalidTransition": "Cette opération n'est pas possible depuis l'état actuel du prêt.",
+      "alreadyDisbursed": "Ce prêt a déjà été décaissé : il se rembourse, il ne se supprime pas.",
+      "notOverdue": "L'échéance de remboursement n'est pas encore dépassée.",
+      "alreadyPenalized": "Ce prêt a déjà été pénalisé pour retard."
+    },
+    "validation": {
+      "currency": "Indiquez un code devise ISO à 3 lettres.",
+      "capital": "Le capital doit être positif ou nul.",
+      "interestRate": "Le taux doit être compris entre 0 et 100 %.",
+      "duration": "La durée doit être comprise entre 1 et 3650 jours.",
+      "latePenaltyRate": "La pénalité doit être comprise entre 0 et 100 %.",
+      "amount": "Le montant du prêt doit être strictement positif."
+    }
+  },
+  "invitations": {
+    "title": "Invitations",
+    "subtitle": "Générez un lien unique, valable {hours} h au maximum et utilisable une seule fois.",
+    "generate": "Générer un lien d'invitation",
+    "pending": "Génération…",
+    "created": "Lien d'invitation généré.",
+    "revoked": "Invitation révoquée.",
+    "revoke": "Révoquer",
+    "deleted": "Lien d'invitation supprimé.",
+    "deleteRefused": "Un lien en attente doit d'abord être révoqué avant d'être supprimé.",
+    "linkCopied": "Lien copié dans le presse-papiers.",
+    "ttlLabel": "Validité",
+    "ttlHours": "{hours} h",
+    "columns": {
+      "link": "Lien",
+      "status": "Statut",
+      "expires": "Expiration",
+      "created": "Créé le"
+    },
+    "status": {
+      "PENDING": "En attente",
+      "USED": "Utilisée",
+      "EXPIRED": "Expirée"
+    },
+    "empty": "Aucune invitation générée pour l'instant.",
+    "activeOnly": "Seules les invitations en attente peuvent être partagées."
+  },
+  "mailbox": {
+    "title": "Messagerie",
+    "open": "Ouvrir la messagerie",
+    "summary": "{total, plural, =0 {Aucun message reçu} one {# message reçu} other {# messages reçus}} · {unread, plural, =0 {tout est lu} one {# non lu} other {# non lus}}.",
+    "unreadAlert": "{count, plural, =0 {Aucun message non lu} one {# message non lu} other {# messages non lus}}",
+    "kpi": {
+      "total": "Messages reçus",
+      "totalHint": "Adressés par l'administration de la tontine",
+      "unread": "Non lus",
+      "unreadHint": "Ils restent en gras tant qu'ils ne sont pas ouverts"
+    },
+    "inbox": {
+      "title": "Boîte de réception",
+      "subtitle": "Les messages que l'administration vous a adressés. La messagerie est à sens unique : seuls les administrateurs écrivent.",
+      "empty": "Aucun message pour l'instant.",
+      "unreadBadge": "Non lu",
+      "columns": {
+        "subject": "Objet",
+        "sender": "Expéditeur",
+        "date": "Reçu le"
+      }
+    },
+    "detail": {
+      "back": "Retour à la messagerie",
+      "from": "Expéditeur",
+      "noReply": "Ce message ne se répond pas depuis l'application. Adressez-vous à un administrateur de la tontine."
+    },
+    "compose": {
+      "title": "Nouveau message",
+      "subtitle": "Écrivez à toute la tontine, à quelques membres ou à un seul. Le message part immédiatement, il ne peut pas être repris.",
+      "subject": "Objet",
+      "subjectPlaceholder": "Réunion du samedi",
+      "content": "Message",
+      "contentPlaceholder": "Votre message aux membres…",
+      "audience": "Destinataires",
+      "audienceAll": "{count, plural, =0 {Tous les membres} one {Tous les membres (#)} other {Tous les membres (#)}}",
+      "audienceSelected": "Membres choisis",
+      "recipients": "Choisir les membres",
+      "recipientsHint": "Cochez au moins un membre. Un seul destinataire coché, et le message reste privé.",
+      "submit": "Envoyer",
+      "pending": "Envoi…",
+      "noMember": "Cette tontine ne compte encore aucun autre membre à qui écrire."
+    },
+    "sent": {
+      "title": "Messages envoyés",
+      "subtitle": "Ce que l'administration a adressé aux membres, et combien l'ont ouvert.",
+      "empty": "Aucun message envoyé pour l'instant.",
+      "readRatio": "{read} / {total}",
+      "columns": {
+        "subject": "Objet",
+        "sender": "Expéditeur",
+        "recipients": "Destinataires",
+        "read": "Lus",
+        "date": "Envoyé le"
+      }
+    },
+    "success": {
+      "sent": "Message envoyé."
+    },
+    "errors": {
+      "noRecipient": "Aucun destinataire valable dans cette tontine."
+    },
+    "validation": {
+      "subject": "Donnez un objet au message (2 à 120 caractères).",
+      "content": "Écrivez votre message (2 à 4 000 caractères).",
+      "recipients": "Choisissez au moins un destinataire."
+    }
+  },
+  "events": {
+    "title": "Événements",
+    "organizer": "Annoncé par {name}",
+    "protocolLabel": "Protocole",
+    "occurrence": "{occurrence}/{cycles}",
+    "recurrence": {
+      "NONE": "Événement unique",
+      "WEEKLY": "Chaque semaine",
+      "MONTHLY": "Chaque mois"
+    },
+    "kpi": {
+      "upcoming": "À venir",
+      "upcomingHint": "Rendez-vous encore à tenir",
+      "past": "Déjà tenus",
+      "pastHint": "Ils restent consultables avec leur protocole"
+    },
+    "agenda": {
+      "title": "Agenda",
+      "subtitle": "Les rendez-vous annoncés par l'administration de la tontine : réunions, assemblées générales, fêtes. Les prochains d'abord, puis ceux déjà tenus, qui gardent leur protocole.",
+      "empty": "Aucun événement à l'agenda."
+    },
+    "view": {
+      "list": "Liste",
+      "calendar": "Calendrier"
+    },
+    "status": {
+      "past": "Terminé"
+    },
+    "week": {
+      "previous": "Semaine précédente",
+      "next": "Semaine suivante",
+      "today": "Cette semaine",
+      "empty": "Aucun événement cette semaine."
+    },
+    "form": {
+      "cardTitle": "Créer un événement",
+      "cardSubtitle": "Il devient immédiatement visible par tous les membres. Un événement récurrent crée toutes ses occurrences d'un coup.",
+      "title": "Titre",
+      "titlePlaceholder": "Assemblée générale trimestrielle",
+      "date": "Date",
+      "startTime": "Heure de début",
+      "endTime": "Heure de fin",
+      "location": "Lieu",
+      "locationPlaceholder": "Chez le président, Bonapriso",
+      "recurrence": "Périodicité",
+      "cycles": "Nombre de cycles",
+      "cyclesHint": "Nombre d'occurrences à créer à partir de la date choisie. Ex : 6 réunions mensuelles.",
+      "description": "Description",
+      "descriptionPlaceholder": "Ordre du jour, points à préparer…",
+      "protocol": "Protocole",
+      "protocolPlaceholder": "Déroulé de la séance, décisions prises…",
+      "protocolHint": "Facultatif à la création : il se rédige en général après la séance, et reste modifiable même une fois l'événement passé.",
+      "submit": "Créer l'événement",
+      "pending": "Création…"
+    },
+    "actions": {
+      "protocol": "Protocole"
+    },
+    "edit": {
+      "title": "Modifier l'événement",
+      "subtitle": "Le titre, le lieu, la description et le protocole. Pour déplacer un rendez-vous, supprimez-le et recréez-le : les membres seront ainsi réellement réavertis.",
+      "pastTitle": "Protocole de la séance",
+      "pastSubtitle": "Cet événement a déjà eu lieu : seul son protocole reste modifiable."
+    },
+    "delete": {
+      "title": "Supprimer l'événement",
+      "subtitle": "« {title} » sera supprimé définitivement. Cette action est immédiate et irréversible.",
+      "seriesSubtitle": "« {title} » fait partie d'une série récurrente. Choisissez ce que vous souhaitez supprimer — l'action est immédiate et irréversible.",
+      "scope": "Portée de la suppression",
+      "scopeOne": "Cette date seulement",
+      "scopeSeries": "Toute la série",
+      "scopeSeriesHint": "Les occurrences déjà tenues sont conservées : un événement passé ne se supprime pas.",
+      "submit": "Supprimer",
+      "pending": "Suppression…"
+    },
+    "success": {
+      "created": "Événement créé.",
+      "seriesCreated": "Série d'événements créée.",
+      "updated": "Événement modifié.",
+      "protocolSaved": "Protocole enregistré.",
+      "deleted": "Événement supprimé.",
+      "seriesDeleted": "Série supprimée. Les occurrences déjà tenues ont été conservées."
+    },
+    "errors": {
+      "notFound": "Cet événement n'existe pas dans cette tontine.",
+      "pastDate": "Choisissez une date à venir : un événement déjà terminé ne pourrait plus être supprimé.",
+      "pastLocked": "Cet événement a déjà eu lieu : seul son protocole reste modifiable.",
+      "pastNotDeletable": "Un événement déjà tenu ne peut pas être supprimé."
+    },
+    "validation": {
+      "title": "Donnez un titre à l'événement (2 à 120 caractères).",
+      "date": "Choisissez une date valide.",
+      "time": "Indiquez une heure valide (HH:MM).",
+      "timeRange": "L'heure de fin doit suivre l'heure de début.",
+      "location": "Indiquez le lieu (2 à 160 caractères).",
+      "description": "Description trop longue (2 000 caractères maximum).",
+      "protocol": "Protocole trop long (4 000 caractères maximum).",
+      "cycles": "Indiquez entre 2 et 104 cycles."
+    }
+  },
+  "audit": {
+    "title": "Journal d'audit",
+    "subtitle": "Chaque mouvement d'argent, daté et signé. Lisible par tous, modifiable par personne.",
+    "empty": "Aucun mouvement enregistré pour l'instant.",
+    "emptyFiltered": "Aucun mouvement ne correspond à ce filtre.",
+    "loadMore": "Voir les mouvements plus anciens",
+    "systemActor": "Application",
+    "integrity": {
+      "valid": "Intégrité vérifiée · {count, plural, one {# écriture} other {# écritures}}",
+      "broken": "Chaîne rompue à l'écriture #{seq}",
+      "empty": "Journal vide"
+    },
+    "filters": {
+      "family": "Type de mouvement",
+      "member": "Membre",
+      "allFamilies": "Tous les mouvements",
+      "allMembers": "Tous les membres",
+      "families": {
+        "CASH_RESERVE": "Fond de caisse et caution",
+        "PAYOUT": "Cagnotte",
+        "LOANS": "Prêts",
+        "PENALTIES": "Pénalités",
+        "ROUNDS": "Tours",
+        "SOLIDARITY": "Solidarité",
+        "TERMS": "Barèmes",
+        "SUBSCRIPTION": "Abonnement"
+      }
+    },
+    "actions": {
+      "CASH_RESERVE_LEVY": "Prélèvement de solidarité",
+      "CASH_RESERVE_REPLENISH": "Renflouement du fond de caisse",
+      "CASH_RESERVE_PENALTY_DEBIT": "Pénalité débitée du fond de caisse",
+      "CASH_RESERVE_PENALTY_REFUND": "Pénalité restituée au fond de caisse",
+      "CAUTION_REPLENISH": "Complément de caution",
+      "PAYOUT_DISTRIBUTED": "Cagnotte remise",
+      "PAYOUT_REVERTED": "Remise de cagnotte annulée",
+      "ROTATION_ORDER_CHANGED": "Ordre de passage modifié",
+      "LOAN_REQUESTED": "Prêt demandé",
+      "LOAN_APPROVED": "Prêt accordé",
+      "LOAN_DISBURSED": "Prêt décaissé",
+      "LOAN_REPAID": "Prêt remboursé",
+      "LOAN_DELETED": "Demande de prêt supprimée",
+      "LOAN_LATE_PENALTY": "Pénalité de retard de remboursement",
+      "LOAN_FUND_CONFIGURED": "Caisse de prêt configurée",
+      "PENALTY_APPLIED": "Pénalité appliquée",
+      "PENALTY_CANCELLED": "Pénalité annulée",
+      "ROUND_CREATED": "Tour créé",
+      "ROUND_STATUS_CHANGED": "Statut du tour modifié",
+      "CONTRIBUTIONS_RECORDED": "Versements du mois constatés",
+      "SOLIDARITY_EVENT_CREATED": "Motif de solidarité ajouté",
+      "SOLIDARITY_EVENT_UPDATED": "Motif de solidarité modifié",
+      "SOLIDARITY_EVENT_DELETED": "Motif de solidarité retiré",
+      "SOLIDARITY_CLAIM_DECLARED": "Événement de solidarité signalé",
+      "SOLIDARITY_CLAIM_COLLECTED": "Solidarité prélevée",
+      "SOLIDARITY_CLAIM_CANCELLED": "Solidarité annulée",
+      "TONTINE_TERMS_UPDATED": "Barèmes de la tontine modifiés",
+      "SUBSCRIPTION_STARTED": "Abonnement Premium souscrit",
+      "SUBSCRIPTION_PAUSED": "Abonnement mis en pause",
+      "SUBSCRIPTION_RESUMED": "Abonnement repris",
+      "SUBSCRIPTION_CANCELLED": "Abonnement résilié",
+      "SUBSCRIPTION_CHARGED": "Échéance d'abonnement prélevée"
+    },
+    "columns": {
+      "seq": "#",
+      "action": "Mouvement",
+      "actor": "Auteur",
+      "target": "Concerne",
+      "date": "Date",
+      "amount": "Montant",
+      "balanceAfter": "Solde après"
+    }
+  },
+  "subscription": {
+    "title": "Abonnement",
+    "freeSubtitle": "Votre tontine tourne sur la formule gratuite. Le Premium se paie par tontine, et se prélève sur le fond de caisse du groupe.",
+    "premiumSubtitle": "Votre tontine est au Premium. L'échéance est répartie entre les membres et prélevée sur leur fond de caisse.",
+    "plans": {
+      "FREE": "Formule gratuite",
+      "PREMIUM": "Premium"
+    },
+    "status": {
+      "PAUSED": "En pause"
+    },
+    "nextDue": "Prochaine échéance le {date}.",
+    "cashReserveNote": "Le prélèvement répartit l'échéance entre tous les membres et laisse une ligne dans leur fond de caisse ainsi que dans le journal d'audit.",
+    "kpi": {
+      "price": "Tarif mensuel",
+      "free": "Gratuit",
+      "perMonth": "par mois, par tontine",
+      "forever": "pour toujours",
+      "perMember": "Quote-part par membre",
+      "perMemberHint": "réparti entre {count} membres",
+      "members": "Membres",
+      "membersFull": "Plafond atteint",
+      "membersLeft": "{count} places restantes"
+    },
+    "features": {
+      "members": "Jusqu'à 50 membres",
+      "report": "Rapport de fin de tour et export",
+      "modules": "Solidarité, prêts et caution",
+      "history": "Historique complet et scoring des membres",
+      "cashReserve": "Payable depuis le fond de caisse"
+    },
+    "actions": {
+      "start": "Passer au Premium",
+      "collect": "Prélever l'échéance",
+      "pause": "Mettre en pause",
+      "resume": "Reprendre l'abonnement",
+      "cancel": "Résilier"
+    },
+    "charges": {
+      "title": "Échéances prélevées",
+      "subtitle": "Ce que le groupe a réellement payé, période par période.",
+      "empty": "Aucune échéance prélevée pour l'instant.",
+      "columns": {
+        "period": "Période",
+        "members": "Membres",
+        "perMember": "Par membre",
+        "amount": "Total"
+      }
+    },
+    "success": {
+      "started": "Abonnement Premium activé.",
+      "paused": "Abonnement mis en pause.",
+      "resumed": "Abonnement repris.",
+      "cancelled": "Abonnement résilié. Aucune donnée n'a été supprimée.",
+      "charged": "Échéance prélevée sur le fond de caisse des membres."
+    },
+    "errors": {
+      "notFound": "Aucun abonnement pour cette tontine.",
+      "alreadyPremium": "Cette tontine est déjà au Premium.",
+      "notActive": "L'abonnement n'est pas actif.",
+      "notPaused": "L'abonnement n'est pas en pause.",
+      "notCollectable": "L'échéance ne peut pas être prélevée : abonnement inactif ou non approuvé par le groupe.",
+      "alreadyCharged": "Cette période a déjà été prélevée.",
+      "noMembers": "Aucun membre à répartir l'échéance."
+    }
+  },
+  "payments": {
+    "title": "Paiements",
+    "kpi": {
+      "collected": "Encaissé",
+      "collectedHint": "{count, plural, =0 {aucun paiement confirmé} one {# paiement confirmé} other {# paiements confirmés}}",
+      "due": "À encaisser",
+      "dueHint": "{count, plural, =0 {rien en attente} one {# paiement en attente} other {# paiements en attente}}",
+      "failed": "Échecs",
+      "failedHint": "Paiements refusés ou expirés",
+      "refunded": "Remboursements",
+      "refundedHint": "Encaissements rendus au groupe",
+      "none": "—"
+    },
+    "methods": {
+      "title": "Modes de paiement",
+      "subtitle": "Stripe et PayPal encaissent aujourd'hui ; MTN Mobile Money et Orange Money suivront.",
+      "mode": "Environnement",
+      "modes": {
+        "TEST": "Test",
+        "LIVE": "Production"
+      },
+      "noSecret": "Aucune clé",
+      "updatedAt": "Mis à jour le {date}",
+      "missingKeyTitle": "Clé de chiffrement absente",
+      "missingKeyBody": "Définissez PAYMENTS_ENCRYPTION_KEY (32 octets) pour pouvoir enregistrer les clés des prestataires. Sans elle, aucun secret n'est stocké : mieux vaut rien du tout que du texte en clair.",
+      "state": {
+        "active": "Actif",
+        "inactive": "Inactif",
+        "unconfigured": "À configurer",
+        "soon": "Bientôt"
+      },
+      "actions": {
+        "configure": "Configurer",
+        "edit": "Modifier",
+        "enable": "Activer",
+        "disable": "Désactiver"
+      },
+      "form": {
+        "title": "Configurer {provider}",
+        "description": "Les clés secrètes sont chiffrées avant d'être enregistrées, et ne sont jamais réaffichées.",
+        "mode": "Environnement",
+        "modeHint": "Restez sur le bac à sable du prestataire tant que l'encaissement n'est pas rodé.",
+        "state": "État",
+        "secretHint": "Laisser vide pour conserver la clé déjà enregistrée.",
+        "webhookHint": "Facultatif. Sert à vérifier les notifications envoyées par le prestataire.",
+        "submit": "Enregistrer",
+        "pending": "Enregistrement…"
+      }
+    },
+    "providers": {
+      "STRIPE": {
+        "name": "Stripe",
+        "description": "Cartes bancaires, en Europe comme en Amérique du Nord.",
+        "publicKey": "Clé publiable",
+        "secret": "Clé secrète",
+        "webhookSecret": "Secret de webhook"
+      },
+      "PAYPAL": {
+        "name": "PayPal",
+        "description": "Comptes PayPal et cartes : le réflexe de la diaspora.",
+        "publicKey": "Identifiant client",
+        "secret": "Secret client",
+        "webhookSecret": "Identifiant de webhook"
+      },
+      "MTN_MOMO": {
+        "name": "MTN Mobile Money",
+        "description": "Paiement mobile en zone MTN. Intégration à venir.",
+        "publicKey": "Identifiant d'API",
+        "secret": "Clé d'abonnement",
+        "webhookSecret": "Secret de rappel"
+      },
+      "ORANGE_MONEY": {
+        "name": "Orange Money",
+        "description": "Paiement mobile en zone Orange. Intégration à venir.",
+        "publicKey": "Identifiant client",
+        "secret": "Secret client",
+        "webhookSecret": "Secret de rappel"
+      }
+    },
+    "list": {
+      "title": "Encaissements",
+      "subtitle": "Les cent derniers paiements, du plus récent au plus ancien.",
+      "empty": "Aucun paiement pour l'instant.",
+      "emptyFiltered": "Aucun paiement ne correspond à ce filtre.",
+      "columns": {
+        "date": "Date",
+        "tontine": "Tontine",
+        "provider": "Prestataire",
+        "status": "Statut",
+        "amount": "Montant",
+        "actions": "Action"
+      }
+    },
+    "filters": {
+      "status": "Statut",
+      "allStatuses": "Tous les statuts",
+      "provider": "Prestataire",
+      "allProviders": "Tous les prestataires"
+    },
+    "status": {
+      "PENDING": "En attente",
+      "PROCESSING": "En cours",
+      "SUCCEEDED": "Encaissé",
+      "FAILED": "Échoué",
+      "REFUNDED": "Remboursé"
+    },
+    "reconcile": {
+      "action": "Rapprocher",
+      "title": "Rapprocher le paiement",
+      "description": "Constatez ce que le prestataire a réellement encaissé, tant que ses notifications automatiques ne sont pas branchées.",
+      "status": "Nouveau statut",
+      "reference": "Référence du prestataire",
+      "referenceHint": "Identifiant de la transaction chez le prestataire, pour retrouver la ligne de son côté.",
+      "failureReason": "Motif de l'échec",
+      "submit": "Enregistrer",
+      "pending": "Enregistrement…"
+    },
+    "success": {
+      "methodSaved": "Prestataire enregistré.",
+      "methodEnabled": "Prestataire activé.",
+      "methodDisabled": "Prestataire désactivé.",
+      "statusUpdated": "Paiement mis à jour."
+    },
+    "errors": {
+      "providerUnavailable": "Ce prestataire n'est pas encore intégré.",
+      "secretRequired": "La clé secrète est requise à la première configuration.",
+      "missingKey": "Clé de chiffrement absente côté serveur : impossible d'enregistrer un secret.",
+      "notConfigured": "Ce prestataire doit d'abord être configuré.",
+      "paymentNotFound": "Ce paiement n'existe plus.",
+      "invalidTransition": "Ce changement de statut n'est pas permis."
+    },
+    "validation": {
+      "provider": "Prestataire inconnu.",
+      "status": "Statut inconnu.",
+      "publicKey": "L'identifiant public est requis.",
+      "secret": "Cette clé est trop longue.",
+      "reference": "La référence est trop longue.",
+      "failureReason": "Le motif est trop long."
+    }
+  },
+  "polls": {
+    "title": "Votes",
+    "open": "Ouvrir les votes",
+    "summary": "{running, plural, =0 {Aucun vote en cours} one {# vote en cours} other {# votes en cours}} · {pending, plural, =0 {vous avez tout voté} one {# à exprimer} other {# à exprimer}}.",
+    "pendingAlert": "{count, plural, =0 {Aucun vote en attente} one {# vote à exprimer} other {# votes à exprimer}}",
+    "openedAt": "Ouvert le {date}",
+    "closesAt": "Clôture le {date}",
+    "status": {
+      "toVote": "À voter",
+      "voted": "Voté",
+      "closed": "Clos"
+    },
+    "kpi": {
+      "pending": "À voter",
+      "pendingHint": "Scrutins ouverts où vous n'avez pas encore voté",
+      "closed": "Votes clos",
+      "closedHint": "Leur résultat reste consultable"
+    },
+    "running": {
+      "title": "Votes en cours",
+      "subtitle": "Les questions soumises par l'administration de la tontine. Cliquez sur un vote pour choisir votre option et voir les résultats.",
+      "empty": "Aucun vote en cours."
+    },
+    "closed": {
+      "title": "Votes clos",
+      "subtitle": "Les scrutins dont l'échéance est passée. Ils ne reçoivent plus de bulletin, seul leur résultat se consulte.",
+      "empty": "Aucun vote clos."
+    },
+    "form": {
+      "cardTitle": "Lancer un vote",
+      "cardSubtitle": "Il devient immédiatement visible par tous les membres, qui reçoivent une pastille sur l'onglet tant qu'ils n'ont pas voté.",
+      "question": "Question",
+      "questionPlaceholder": "Où tenir l'assemblée générale de décembre ?",
+      "options": "Options",
+      "optionsHint": "De 2 à {max} options. Chaque membre en choisira une seule.",
+      "optionLabel": "Option {index}",
+      "optionPlaceholder": "Option {index}",
+      "addOption": "Ajouter une option",
+      "removeOption": "Retirer cette option",
+      "closesAt": "Date et heure de clôture",
+      "closesAtHint": "Passé cette échéance, plus aucun bulletin n'est accepté.",
+      "submit": "Lancer le vote",
+      "pending": "Lancement…"
+    },
+    "dialog": {
+      "window": "Ouvert le {start} · clôture le {end}",
+      "choose": "Choisissez votre option",
+      "myChoice": "Votre choix",
+      "optionVotes": "{count, plural, =0 {0 voix} one {# voix} other {# voix}}",
+      "turnout": "{voters} sur {members} membres ont voté.",
+      "votedNotice": "Vous avez voté : votre bulletin est définitif et ne peut plus être changé.",
+      "closedNotice": "Ce vote est clos. Voici le résultat définitif.",
+      "readOnlyNotice": "Vous ne siégez pas dans cette tontine : vous pouvez consulter ce vote mais pas y participer.",
+      "submit": "Voter",
+      "pending": "Envoi du bulletin…"
+    },
+    "delete": {
+      "title": "Supprimer le vote",
+      "subtitle": "« {question} » sera supprimé définitivement. Cette action est immédiate et irréversible.",
+      "subtitleWithVotes": "« {question} » sera supprimé définitivement, {count, plural, one {ainsi que le bulletin déjà déposé} other {ainsi que les # bulletins déjà déposés}}. Cette action est immédiate et irréversible.",
+      "submit": "Supprimer",
+      "pending": "Suppression…"
+    },
+    "success": {
+      "created": "Vote lancé.",
+      "voted": "Votre bulletin est enregistré.",
+      "deleted": "Vote supprimé, avec les avis exprimés."
+    },
+    "errors": {
+      "notFound": "Ce vote n'existe pas dans cette tontine.",
+      "notMember": "Seuls les membres de cette tontine peuvent voter.",
+      "closed": "Ce vote est clos : il n'accepte plus de bulletin.",
+      "alreadyVoted": "Vous avez déjà voté : un bulletin ne se reprend pas.",
+      "optionNotFound": "Cette option n'appartient pas à ce vote.",
+      "pastDeadline": "Choisissez une échéance à venir : un vote lancé déjà clos ne recueillerait aucune voix."
+    },
+    "validation": {
+      "question": "Posez la question du vote (5 à 200 caractères).",
+      "option": "Option trop longue (120 caractères maximum).",
+      "optionCount": "Proposez entre 2 et 10 options.",
+      "optionDuplicate": "Deux options identiques : elles partageraient les mêmes voix.",
+      "closesAt": "Indiquez une date et une heure de clôture valides.",
+      "choice": "Choisissez une option avant de voter."
+    }
+  },
+  "featureRequests": {
+    "open": "Proposez une fonctionnalité",
+    "hint": "Dites-nous ce qui vous manque. Votre proposition est anonyme : seule la tontine d'où elle vient est enregistrée.",
+    "placeholder": "Ce que j'aimerais pouvoir faire…",
+    "submit": "Soumettre",
+    "pending": "Envoi…",
+    "success": "Soumission reçue. Merci !",
+    "validation": {
+      "content": "Décrivez votre souhait en quelques mots (10 caractères minimum)."
+    },
+    "admin": {
+      "title": "Propositions de fonctionnalités",
+      "subtitle": "Déposées par les membres depuis le tableau de bord de leur tontine. Elles sont anonymes : seule la tontine d'origine est connue.",
+      "empty": "Aucune proposition pour l'instant.",
+      "columns": {
+        "date": "Reçue le",
+        "tontine": "Tontine",
+        "content": "Proposition"
+      }
+    }
+  }
+}

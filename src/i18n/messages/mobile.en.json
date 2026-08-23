@@ -1,0 +1,25 @@
+{
+  "mobile": {
+    "tabs": {
+      "tontines": "Tontines",
+      "contributions": "Contributions",
+      "mailbox": "Messages",
+      "profile": "Profile"
+    },
+    "placeholder": {
+      "title": "Coming soon",
+      "body": "This screen is waiting on the web app's `/api/v1/*` routes. The foundation — sign-in, theme, navigation — is in place."
+    },
+    "profile": {
+      "signedInAs": "Signed in as",
+      "appearance": "Appearance",
+      "language": "Language",
+      "themeMode": {
+        "system": "System",
+        "light": "Light",
+        "dark": "Dark"
+      },
+      "memberScope": "This app only shows your member data, even if your account administers a tontine."
+    }
+  }
+}
