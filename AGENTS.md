@@ -27,12 +27,18 @@ projet : on n'y commite rien depuis une session mobile.
 
 ## Stack
 
-Expo SDK 57 · React Native 0.86 · React 19.2 · expo-router (typedRoutes) ·
+Expo SDK 56 · React Native 0.85 · React 19.2 · expo-router (typedRoutes) ·
 TypeScript strict · alias `@/*` → `./src/*`.
 
-Depuis le SDK 56, expo-router **n'utilise plus `@react-navigation/native`** : le
+expo-router **n'utilise plus `@react-navigation/native`** depuis le SDK 56 : le
 fournisseur de thème et les thèmes de base se réimportent depuis `expo-router`.
-Toute dépendance directe à react-navigation fait échouer le bundle.
+Toute dépendance directe à react-navigation fait échouer le bundle. C'est aussi
+ce qui fixe le **plancher de version** : redescendre en SDK 55 obligerait à
+réintroduire react-navigation dans `src/app/_layout.tsx`.
+
+L'Expo Go du magasin ne suit que le dernier SDK. Pour essayer sur téléphone sans
+compiler, il faut l'Expo Go de la version correspondante (expo.dev/go, Android
+seulement) ; sinon, un **development build** ou directement l'APK de test.
 
 `web.output` vaut `single` et non `static` : le prérendu statique fait tourner
 les routes dans Node, où aucun module natif n'existe — `expo-secure-store` y

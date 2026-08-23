@@ -14,8 +14,9 @@ cp .env.example .env   # puis renseigner les clés Supabase
 npx expo start
 ```
 
-Scannez le QR code avec **Expo Go** (Android ou iOS) pour lancer l'app sur un
-téléphone.
+Le projet est sur **Expo SDK 56**. L'Expo Go du magasin ne suit que le dernier
+SDK : pour essayer sur téléphone, prenez l'Expo Go de la version correspondante
+(expo.dev/go, Android seulement), un *development build*, ou l'APK de test.
 
 | Commande | Effet |
 | --- | --- |
