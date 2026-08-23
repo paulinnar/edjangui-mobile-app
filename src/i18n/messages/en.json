@@ -43,6 +43,7 @@
     "errors": {
       "unexpected": "Something went wrong. Please try again.",
       "unauthorized": "You do not have access to this resource.",
+      "notFound": "This resource could not be found.",
       "required": "This field is required."
     },
     "language": "Language",

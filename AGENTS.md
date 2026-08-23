@@ -75,25 +75,36 @@ L'app web n'expose **aucune** route `/api` : ses 17 fichiers `src/app/actions/`
 sont des Server Actions Next qui tapent Prisma en direct, donc inatteignables
 depuis React Native.
 
-**Le mobile consomme des Route Handlers `/api/v1/*` ajoutés dans `edjangui-app`**,
-qui réutilisent la logique déjà écrite dans `src/lib/*.ts` (`scoring.ts`,
+**Le mobile consomme les Route Handlers `/api/v1/*` d'`edjangui-app`**, qui
+réutilisent la logique déjà écrite dans `src/lib/*.ts` (`scoring.ts`,
 `rounds.ts`, `penalties.ts`, `contributions.ts`…). Une seule implémentation des
-règles métier, partagée par le web et le mobile.
+règles métier, partagée par le web et le mobile. Le contrat est documenté dans
+`docs/api-v1.md` côté web.
 
 - Authentification : JWT Supabase porté en `Authorization: Bearer`.
 - Chaque handler revérifie le périmètre membre côté serveur — le filtrage n'est
-  jamais laissé au client.
+  jamais laissé au client. Un super-administrateur qui se connecte depuis le
+  mobile obtient une liste de tontines vide, par construction.
+- La seule écriture exposée, hors profil, est le marquage de lecture d'un
+  message.
 - Écarté : l'accès direct aux tables via PostgREST, qui imposerait des policies
   RLS sur les 28 modèles Prisma et une duplication du métier en SQL.
+
+`src/lib/api/contract.ts` est **copié** du web par `npm run sync-messages`, au
+même titre que les catalogues : une divergence de forme devient une erreur de
+compilation des deux côtés, pas un écran vide à l'exécution. Ne jamais l'éditer
+ici — la source est l'app web.
 
 ## Ordre de travail
 
 1. ~~**Socle**~~ — fait : auth Supabase (SecureStore chunké — le Keystore Android
    refuse au-delà de 2 048 octets), gate de session, onglets membre, bascule
    Système/Clair/Sombre, i18n fr/en.
-2. **Backend** — les Route Handlers `/api/v1/*` et le contrat d'API.
-3. **Écrans membre** — Mes tontines → détail du tour → mes cotisations →
-   messages et annonces → profil.
+2. ~~**Backend**~~ — fait dans `edjangui-app` : Route Handlers `/api/v1/*` et
+   contrat (`docs/api-v1.md`).
+3. ~~**Écrans membre**~~ — fait : mes tontines → tontine → détail du tour → mes
+   cotisations → messagerie → profil. Lecture seule, sauf le nom/avatar du
+   profil et le marquage de lecture d'un message.
 4. **Effet météorites** — port de `src/components/landing/hero-canvas.tsx`
    (canvas 2D côté web) vers `@shopify/react-native-skia` + Reanimated pour les
    particules, `expo-linear-gradient` et flou Skia pour les aurores. Appliqué au

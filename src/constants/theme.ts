@@ -26,6 +26,14 @@ const palette = {
     accentForeground: '#501a00',
     border: '#e7ded7',
     destructive: '#e7000b',
+    /**
+     * Constats de cotisation. L'app web les prend directement dans la palette
+     * Tailwind (`emerald-700`, `amber-700` en clair ; les variantes `-400` en
+     * sombre) plutôt que dans ses tokens de marque : on transpose donc les
+     * mêmes valeurs, sans chercher à les rattacher à la charte.
+     */
+    success: '#047857',
+    warning: '#b45309',
     /** Vert officiel de WhatsApp : identique dans les deux thèmes. */
     whatsapp: '#25d366',
   },
@@ -46,6 +54,8 @@ const palette = {
     /** `oklch(0.78 0.06 60 / 16%)` côté web : l'alpha est porté ici. */
     border: '#d5af9129',
     destructive: '#ff6467',
+    success: '#34d399',
+    warning: '#fbbf24',
     whatsapp: '#25d366',
   },
 } as const;

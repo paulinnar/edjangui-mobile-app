@@ -6,10 +6,6 @@
       "mailbox": "Messages",
       "profile": "Profil"
     },
-    "placeholder": {
-      "title": "Bientôt disponible",
-      "body": "Cet écran attend les routes `/api/v1/*` de l'app web. Le socle — connexion, thème, navigation — est en place."
-    },
     "profile": {
       "signedInAs": "Connecté en tant que",
       "appearance": "Apparence",
@@ -20,6 +16,13 @@
         "dark": "Sombre"
       },
       "memberScope": "Cette application n'affiche que vos données de membre, même si votre compte administre une tontine."
+    },
+    "members": "{count, plural, =0 {Aucun membre} one {# membre} other {# membres}}",
+    "roundMonth": "Mois du tour"
+  },
+  "common": {
+    "actions": {
+      "retry": "Réessayer"
     }
   }
 }

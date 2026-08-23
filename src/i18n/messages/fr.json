@@ -43,6 +43,7 @@
     "errors": {
       "unexpected": "Une erreur inattendue est survenue. Réessayez.",
       "unauthorized": "Vous n'avez pas accès à cette ressource.",
+      "notFound": "Cette ressource est introuvable.",
       "required": "Ce champ est obligatoire."
     },
     "language": "Langue",

@@ -6,10 +6,6 @@
       "mailbox": "Messages",
       "profile": "Profile"
     },
-    "placeholder": {
-      "title": "Coming soon",
-      "body": "This screen is waiting on the web app's `/api/v1/*` routes. The foundation — sign-in, theme, navigation — is in place."
-    },
     "profile": {
       "signedInAs": "Signed in as",
       "appearance": "Appearance",
@@ -20,6 +16,13 @@
         "dark": "Dark"
       },
       "memberScope": "This app only shows your member data, even if your account administers a tontine."
+    },
+    "members": "{count, plural, =0 {No members} one {# member} other {# members}}",
+    "roundMonth": "Round month"
+  },
+  "common": {
+    "actions": {
+      "retry": "Retry"
     }
   }
 }

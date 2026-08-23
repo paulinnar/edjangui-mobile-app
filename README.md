@@ -36,19 +36,50 @@ inscrit dans le bundle, aucune clé secrète ne doit y figurer.
 | `EXPO_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | clé publiable Supabase |
 | `EXPO_PUBLIC_API_URL` | base des Route Handlers `/api/v1/*` de l'app web |
 
+Sur un **téléphone physique**, `localhost` désigne le téléphone lui-même :
+`EXPO_PUBLIC_API_URL` doit porter l'adresse de l'ordinateur sur le réseau local
+(`http://192.168.x.y:3000`), et l'app web doit écouter sur toutes les interfaces
+(`next dev -H 0.0.0.0`). Un émulateur Android, lui, atteint la machine hôte par
+`http://10.0.2.2:3000`.
+
 ## Architecture
 
 ```
 src/app/(auth)      login, register, forgot-password — écrans publics
-src/app/(app)       tontines, contributions, mailbox, profile — onglets membre
+src/app/(app)       onglets membre : tontines, contributions, mailbox, profile
 src/app/reset-password  arrivée du lien de réinitialisation (hors garde `(auth)`)
 src/components      primitives partagées et gabarits d'écran
-src/components/ui   Button, Field, Card, Segmented, FormMessage…
+src/components/ui   Button, Field, Card, Segmented, Badge, Avatar, états…
 src/constants       theme.ts — couleurs, Fonts, Spacing, Radius
-src/hooks           useTheme, useColorScheme
+src/hooks           useTheme, useColorScheme, useFormat
 src/i18n            catalogues et interpolation ICU réduite
 src/lib             Supabase, session, stockage chiffré, validation
+src/lib/api         contrat, client HTTP, hook de lecture
 ```
+
+Les onglets « Tontines » et « Messages » sont des **piles** et non des écrans
+simples : quitter un onglet et y revenir doit retrouver le tour qu'on lisait, pas
+repartir de la liste.
+
+### Données
+
+`src/lib/api/contract.ts` est **copié** de l'app web par `npm run sync-messages`,
+comme les catalogues : toute divergence de forme devient une erreur de
+compilation des deux côtés plutôt qu'un écran vide à l'exécution.
+
+Le jeton Supabase part en `Authorization: Bearer` à chaque appel — relu plutôt
+que mémorisé, il expire en une heure et `getSession()` le renouvelle au passage.
+Un `401` ferme la session : le garde de navigation ramène au login, ce qui vaut
+mieux qu'un écran d'erreur dont on ne peut rien faire.
+
+Pas de bibliothèque de cache : chaque écran lit sa route et la recharge au
+retour dessus (`useFocusEffect`), avec tirer-pour-rafraîchir. Le seul cas qui
+demanderait davantage — la pastille de non-lus après lecture d'un message — se
+règle par ce rechargement au focus.
+
+Les **avatars** ne sont pas embarqués : les 32 fichiers de la planche pèsent 4 Mo
+et sont servis par `public/avatars` de l'app web. Faute de réseau, les initiales
+prennent le relais.
 
 ### Authentification
 
@@ -82,7 +113,7 @@ ne les emporte pas.
 ## État d'avancement
 
 - [x] **Socle** — auth Supabase, gate de session, onglets membre, thèmes, i18n
-- [ ] **Backend** — Route Handlers `/api/v1/*` à ajouter dans `edjangui-app`
-- [ ] **Écrans membre** — tontines, tour, cotisations, messagerie, profil
+- [x] **Backend** — Route Handlers `/api/v1/*` dans `edjangui-app` (`docs/api-v1.md`)
+- [x] **Écrans membre** — tontines, tour, cotisations, messagerie, profil
 - [ ] **Effet météorites** — port de `hero-canvas.tsx` vers Skia + Reanimated
 - [ ] **APK** — `eas build -p android --profile preview`
