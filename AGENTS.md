@@ -34,6 +34,11 @@ Depuis le SDK 56, expo-router **n'utilise plus `@react-navigation/native`** : le
 fournisseur de thème et les thèmes de base se réimportent depuis `expo-router`.
 Toute dépendance directe à react-navigation fait échouer le bundle.
 
+`web.output` vaut `single` et non `static` : le prérendu statique fait tourner
+les routes dans Node, où aucun module natif n'existe — `expo-secure-store` y
+casse au chargement. L'aperçu web ne sert qu'à contrôler une mise en page, la
+cible reste l'APK, et le stockage y retombe sur `localStorage`.
+
 Polices : Inter (courant) et Roboto (titres), comme le web. Elles s'importent
 par sous-chemin — `@expo-google-fonts/inter/400Regular` — car l'index du paquet
 réexporte toute la famille et Metro embarquerait une vingtaine de `.ttf`

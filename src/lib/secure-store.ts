@@ -1,4 +1,5 @@
 import * as SecureStore from 'expo-secure-store';
+import { Platform } from 'react-native';
 
 /**
  * Stockage chiffré à l'épreuve de la limite de taille d'Android.
@@ -73,5 +74,34 @@ async function removeItem(key: string): Promise<void> {
   await SecureStore.deleteItemAsync(key);
 }
 
+/**
+ * Repli hors Android et iOS.
+ *
+ * `expo-secure-store` s'adosse au Keystore et au Trousseau : il n'existe ni
+ * dans le navigateur, ni dans le Node qui prérend l'export web. Le stockage y
+ * retombe donc sur `localStorage`, et sur rien du tout côté serveur — un rendu
+ * serveur n'a de toute façon aucune session à restaurer.
+ *
+ * Ce repli ne sert qu'aux aperçus web pendant le développement : la cible du
+ * projet reste l'APK, où c'est bien le stockage chiffré qui s'applique.
+ */
+const webStore = {
+  async getItem(key: string) {
+    if (typeof localStorage === 'undefined') return null;
+    return localStorage.getItem(key);
+  },
+  async setItem(key: string, value: string) {
+    if (typeof localStorage === 'undefined') return;
+    localStorage.setItem(key, value);
+  },
+  async removeItem(key: string) {
+    if (typeof localStorage === 'undefined') return;
+    localStorage.removeItem(key);
+  },
+};
+
 /** Adaptateur au format attendu par `supabase-js`. */
-export const chunkedSecureStore = { getItem, setItem, removeItem };
+export const chunkedSecureStore =
+  Platform.OS === 'android' || Platform.OS === 'ios'
+    ? { getItem, setItem, removeItem }
+    : webStore;
