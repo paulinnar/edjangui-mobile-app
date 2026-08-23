@@ -27,8 +27,9 @@ projet : on n'y commite rien depuis une session mobile.
 
 ## Stack
 
-Expo SDK 56 · React Native 0.85 · React 19.2 · expo-router (typedRoutes) ·
-TypeScript strict · alias `@/*` → `./src/*`.
+Expo SDK 57 · React Native 0.86 · React 19.2 · expo-router (typedRoutes) ·
+Skia 2.6 + Reanimated 4 pour le fond animé · TypeScript strict ·
+alias `@/*` → `./src/*`.
 
 expo-router **n'utilise plus `@react-navigation/native`** depuis le SDK 56 : le
 fournisseur de thème et les thèmes de base se réimportent depuis `expo-router`.
@@ -36,9 +37,23 @@ Toute dépendance directe à react-navigation fait échouer le bundle. C'est aus
 ce qui fixe le **plancher de version** : redescendre en SDK 55 obligerait à
 réintroduire react-navigation dans `src/app/_layout.tsx`.
 
-L'Expo Go du magasin ne suit que le dernier SDK. Pour essayer sur téléphone sans
-compiler, il faut l'Expo Go de la version correspondante (expo.dev/go, Android
-seulement) ; sinon, un **development build** ou directement l'APK de test.
+## Essayer sur un téléphone
+
+**Expo Go ne convient pas.** Un client Expo Go ne charge que les projets de son
+propre SDK, et celui du magasin suit le dernier publié : dès que les deux
+divergent, le projet est refusé — c'est l'écart de version qui bloque, pas ce
+qu'embarque le client.
+
+Il faut donc un **development build** : le même rôle qu'Expo Go, mais compilé
+avec les modules natifs de *ce* projet, Skia compris. Il s'installe une fois et
+sert ensuite pour tout le développement, `npx expo start` compris.
+
+```
+npx eas-cli build --platform android --profile development
+```
+
+Les profils sont dans `eas.json` : `development` (APK, client de développement),
+`preview` (APK de test, lot 5) et `production` (bundle Play).
 
 `web.output` vaut `single` et non `static` : le prérendu statique fait tourner
 les routes dans Node, où aucun module natif n'existe — `expo-secure-store` y

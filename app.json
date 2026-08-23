@@ -7,14 +7,12 @@
     "icon": "./assets/images/icon.png",
     "scheme": "edjangui",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
     "ios": {
       "bundleIdentifier": "com.pynsoft.edjangui",
       "supportsTablet": true
     },
     "android": {
       "package": "com.pynsoft.edjangui",
-      "edgeToEdgeEnabled": true,
       "adaptiveIcon": {
         "backgroundColor": "#fc6c0f",
         "foregroundImage": "./assets/images/android-icon-foreground.png"
