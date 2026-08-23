@@ -5,6 +5,7 @@ import {
   formatCalendarRange,
   formatCurrency,
   formatDateTime,
+  formatWallClockDateTime,
   roundMonths,
   type RoundMonth,
 } from '@/lib/format';
@@ -26,6 +27,7 @@ export function useFormat() {
       date: (iso: string) => formatCalendarDate(iso, locale),
       dateRange: (fromIso: string, toIso: string) => formatCalendarRange(fromIso, toIso, locale),
       dateTime: (iso: string) => formatDateTime(iso, locale),
+      wallClock: (iso: string) => formatWallClockDateTime(iso, locale),
       months: (round: { startDate: string; durationMonths: number }): RoundMonth[] =>
         roundMonths(round, locale),
     }),

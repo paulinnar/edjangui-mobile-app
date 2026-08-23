@@ -49,12 +49,15 @@ export default function AppLayout() {
           ),
         }}
       />
+      {/* Messagerie, votes et agenda sous un seul onglet : c'est le
+          regroupement « Groupe » de la navigation web, et la barre n'avait pas
+          trois places de plus à donner. */}
       <Tabs.Screen
-        name="mailbox"
+        name="group"
         options={{
-          title: t('mailbox'),
+          title: t('group'),
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="chatbubbles-outline" color={color} size={size} />
+            <Ionicons name="megaphone-outline" color={color} size={size} />
           ),
         }}
       />

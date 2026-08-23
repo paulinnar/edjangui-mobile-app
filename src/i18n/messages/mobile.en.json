@@ -3,8 +3,16 @@
     "tabs": {
       "tontines": "Tontines",
       "contributions": "Contributions",
-      "mailbox": "Messages",
+      "group": "Group",
       "profile": "Profile"
+    },
+    "group": {
+      "panels": "Group panels",
+      "messages": "Messages",
+      "polls": "Polls",
+      "events": "Agenda",
+      "pollsEmpty": "No polls yet.",
+      "agendaSummary": "{upcoming, plural, =0 {No upcoming meeting} one {# upcoming meeting} other {# upcoming meetings}} · {past, plural, =0 {none held yet} one {# held} other {# held}}."
     },
     "profile": {
       "signedInAs": "Signed in as",

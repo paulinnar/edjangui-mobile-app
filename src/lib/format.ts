@@ -68,6 +68,23 @@ export function formatDateTime(iso: string, locale: Locale): string {
   }).format(new Date(iso));
 }
 
+/**
+ * Date et heure **d'horloge murale**, rendues en UTC.
+ *
+ * L'échéance d'un vote et l'heure d'un événement sont annoncées par
+ * l'administration, pas datées comme un instant : « jeudi 18h00 » doit se lire
+ * « jeudi 18h00 » pour tout le monde, y compris le membre de la diaspora qui
+ * consulte depuis un autre fuseau. Les caler sur le téléphone décalerait
+ * l'heure du rendez-vous d'un lecteur à l'autre.
+ */
+export function formatWallClockDateTime(iso: string, locale: Locale): string {
+  return new Intl.DateTimeFormat(localeTag(locale), {
+    dateStyle: 'medium',
+    timeStyle: 'short',
+    timeZone: 'UTC',
+  }).format(new Date(iso));
+}
+
 export type RoundMonth = {
   /** Rang du mois dans le tour, de 1 à `durationMonths`. */
   month: number;

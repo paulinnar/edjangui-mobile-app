@@ -56,6 +56,7 @@ dès qu'une police personnalisée est posée, on choisit donc `fontFamily`.
 ```
 src/app/(auth)         routes publiques : login, register, forgot-password
 src/app/(app)          routes authentifiées : tabs membre
+src/app/(app)/group.tsx  onglet Groupe : messages, votes, agenda (cartes dépliables)
 src/app/reset-password arrivée du lien de réinitialisation
 src/components         gabarits partagés (AuthShell, Screen, Backdrop, Logo)
 src/components/ui      Button, Field, Card, Segmented, FormMessage, Placeholder
@@ -109,8 +110,15 @@ ici — la source est l'app web.
 2. ~~**Backend**~~ — fait dans `edjangui-app` : Route Handlers `/api/v1/*` et
    contrat (`docs/api-v1.md`).
 3. ~~**Écrans membre**~~ — fait : mes tontines → tontine → détail du tour → mes
-   cotisations → messagerie → profil. Lecture seule, sauf le nom/avatar du
-   profil et le marquage de lecture d'un message.
+   cotisations → groupe (messages, votes, agenda) → profil. Lecture seule, sauf
+   le nom/avatar du profil, le marquage de lecture d'un message et le bulletin
+   d'un vote.
+
+   L'onglet **Groupe** reprend le regroupement `nav.groups.group` du web sous un
+   seul onglet, à trois volets. Les votes et l'agenda attendent leurs Route
+   Handlers côté web : la demande est dans `docs/api-v1-group.md`, et leurs
+   types vivent dans `src/lib/api/contract-pending.ts` — fichier temporaire, à
+   supprimer dès que `sync-messages` ramènera les vrais.
 4. **Effet météorites** — port de `src/components/landing/hero-canvas.tsx`
    (canvas 2D côté web) vers `@shopify/react-native-skia` + Reanimated pour les
    particules, `expo-linear-gradient` et flou Skia pour les aurores. Appliqué au

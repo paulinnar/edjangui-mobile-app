@@ -3,8 +3,16 @@
     "tabs": {
       "tontines": "Tontines",
       "contributions": "Cotisations",
-      "mailbox": "Messages",
+      "group": "Groupe",
       "profile": "Profil"
+    },
+    "group": {
+      "panels": "Volets du groupe",
+      "messages": "Messages",
+      "polls": "Votes",
+      "events": "Agenda",
+      "pollsEmpty": "Aucun vote pour l'instant.",
+      "agendaSummary": "{upcoming, plural, =0 {Aucun rendez-vous à venir} one {# rendez-vous à venir} other {# rendez-vous à venir}} · {past, plural, =0 {aucune séance tenue} one {# séance tenue} other {# séances tenues}}."
     },
     "profile": {
       "signedInAs": "Connecté en tant que",
