@@ -37,6 +37,27 @@ inscrit dans le bundle, aucune clé secrète ne doit y figurer.
 | `EXPO_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | clé publiable Supabase |
 | `EXPO_PUBLIC_API_URL` | base des Route Handlers `/api/v1/*` de l'app web |
 
+### Aperçu web et CORS
+
+Sur Android et iOS, l'app appelle `EXPO_PUBLIC_API_URL` directement : il n'y a
+pas de CORS. En **aperçu web**, la page vient du serveur Expo (`localhost:8081`)
+et l'API répond ailleurs (`localhost:3000`) — deux origines, donc un blocage du
+navigateur sur chaque appel. C'est un artefact de l'aperçu, pas un défaut de
+l'app.
+
+Plutôt que d'ouvrir l'API aux origines d'un navigateur pour le confort d'un
+outil de développement, un relais local ajoute les en-têtes :
+
+```bash
+npm run dev-api-proxy
+```
+
+Il écoute sur `http://localhost:3001` et relaie vers `http://localhost:3000` ;
+renseignez alors `EXPO_PUBLIC_API_URL="http://localhost:3001"`. Les deux valeurs
+se surchargent en argument : `npm run dev-api-proxy -- http://localhost:3000 3010`.
+
+### Téléphone physique
+
 Sur un **téléphone physique**, `localhost` désigne le téléphone lui-même :
 `EXPO_PUBLIC_API_URL` doit porter l'adresse de l'ordinateur sur le réseau local
 (`http://192.168.x.y:3000`), et l'app web doit écouter sur toutes les interfaces

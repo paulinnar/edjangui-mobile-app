@@ -47,7 +47,8 @@
     "web": "expo start --web",
     "lint": "expo lint",
     "typecheck": "tsc --noEmit",
-    "sync-messages": "node scripts/sync-messages.mjs"
+    "sync-messages": "node scripts/sync-messages.mjs",
+    "dev-api-proxy": "node scripts/dev-api-proxy.mjs"
   },
   "private": true
 }
