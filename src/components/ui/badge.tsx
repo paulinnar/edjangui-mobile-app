@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   badge: {
     alignSelf: 'flex-start',
     borderWidth: 1,
-    borderRadius: Radius['3xl'],
+    borderRadius: Radius.full,
     paddingHorizontal: Spacing.two,
     paddingVertical: 2,
   },

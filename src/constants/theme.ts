@@ -101,6 +101,12 @@ export const Radius = {
   xl: 14,
   '2xl': 18,
   '3xl': 22,
+  /**
+   * Pilule : la valeur dépasse toujours la moitié de la hauteur, ce qui donne
+   * des extrémités parfaitement demi-circulaires quelle que soit la taille du
+   * contrôle. Réservée à ce qui se touche — boutons, onglets, pastilles.
+   */
+  full: 999,
 } as const;
 
 export const MaxContentWidth = 720;

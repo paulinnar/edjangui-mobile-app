@@ -26,7 +26,7 @@ export function ThemedText({ style, type = 'default', themeColor, ...rest }: The
 const styles = StyleSheet.create({
   default: { fontSize: 15, lineHeight: 22, fontFamily: Fonts.regular },
   title: { fontSize: 26, lineHeight: 32, fontFamily: Fonts.heading, letterSpacing: -0.4 },
-  subtitle: { fontSize: 18, lineHeight: 24, fontFamily: Fonts.semibold },
+  subtitle: { fontSize: 16, lineHeight: 22, fontFamily: Fonts.semibold },
   label: { fontSize: 13, lineHeight: 18, fontFamily: Fonts.medium },
   small: { fontSize: 13, lineHeight: 18, fontFamily: Fonts.regular },
   link: { fontSize: 14, lineHeight: 20, fontFamily: Fonts.medium },

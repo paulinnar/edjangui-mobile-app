@@ -81,8 +81,10 @@ const styles = StyleSheet.create({
   base: {
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: Radius.lg,
-    paddingHorizontal: Spacing.four,
+    borderRadius: Radius.full,
+    // La pilule mange ses propres coins : sans marge horizontale plus large, un
+    // libellé court se retrouverait collé à l'arrondi.
+    paddingHorizontal: Spacing.five,
   },
   md: { minHeight: 40 },
   lg: { minHeight: 50 },
