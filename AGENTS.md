@@ -74,6 +74,7 @@ src/app/(app)          routes authentifiées : tabs membre
 src/app/(app)/group.tsx  onglet Groupe : messages, votes, agenda (cartes dépliables)
 src/app/reset-password arrivée du lien de réinitialisation
 src/components         gabarits partagés (AuthShell, Screen, Backdrop, Logo)
+                       backdrop.tsx = Skia ; backdrop.web.tsx = dégradés
 src/components/ui      Button, Field, Card, Segmented, FormMessage, Placeholder
 src/constants          theme.ts — couleurs, Fonts, Spacing, Radius
 src/hooks              useTheme, useColorScheme
@@ -134,10 +135,25 @@ ici — la source est l'app web.
    Handlers côté web : la demande est dans `docs/api-v1-group.md`, et leurs
    types vivent dans `src/lib/api/contract-pending.ts` — fichier temporaire, à
    supprimer dès que `sync-messages` ramènera les vrais.
-4. **Effet météorites** — port de `src/components/landing/hero-canvas.tsx`
-   (canvas 2D côté web) vers `@shopify/react-native-skia` + Reanimated pour les
-   particules, `expo-linear-gradient` et flou Skia pour les aurores. Appliqué au
-   splash et aux écrans `(auth)`.
+4. ~~**Effet météorites**~~ — fait : `hero-canvas.tsx` du web porté sur Skia +
+   Reanimated dans `src/components/backdrop.tsx`, appliqué aux écrans `(auth)`
+   et à l'écran d'attente (`SplashView`, pendant la lecture des polices, des
+   préférences et de la session).
+
+   Tout se déduit d'une horloge tenue **sur le fil d'interface** : aucune
+   position n'est stockée, le fil JavaScript reste libre pour le formulaire et
+   le réseau. Deux toiles — les aurores floutées sont immobiles, donc composées
+   sans être redessinées ; seules les particules et les étoiles filantes
+   s'animent. L'animation s'arrête en arrière-plan et ne démarre pas si le
+   système annonce un mouvement réduit.
+
+   Écarté du web, faute de sens sur téléphone : l'accroche de la poussière au
+   pointeur, les étincelles au clic (un fond qui capterait les appuis les
+   volerait au formulaire), le quadrillage et le grain.
+
+   `backdrop.web.tsx` garde l'ancienne approximation en dégradés : la version
+   web de Skia charge CanvasKit en WebAssembly, ce qui ne se justifie pas pour
+   un aperçu qui ne sert qu'à contrôler une mise en page.
 5. **APK** — `eas build -p android --profile preview`.
 
 ## À configurer côté Supabase
