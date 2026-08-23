@@ -1,14 +1,14 @@
+import Ionicons from '@expo/vector-icons/Ionicons';
 import { router, useLocalSearchParams } from 'expo-router';
-import { Linking, StyleSheet, View } from 'react-native';
+import { Linking, Pressable, StyleSheet, View } from 'react-native';
 
 import { Screen } from '@/components/screen';
 import { ThemedText } from '@/components/themed-text';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import { TouchableCard } from '@/components/ui/row';
 import { StatGrid } from '@/components/ui/stat';
 import { EmptyState, ErrorState, LoadingState } from '@/components/ui/states';
-import { Spacing } from '@/constants/theme';
+import { Fonts, Radius, Spacing } from '@/constants/theme';
 import { useFormat } from '@/hooks/use-format';
 import { useTheme } from '@/hooks/use-theme';
 import { useT } from '@/i18n';
@@ -26,7 +26,6 @@ export default function TontineDetailScreen() {
   const { tontineId } = useLocalSearchParams<{ tontineId: string }>();
   const t = useT();
   const format = useFormat();
-  const theme = useTheme();
 
   const detail = useQuery<ApiTontineDetail>(`/api/v1/tontines/${tontineId}`);
   const rounds = useQuery<ApiRoundSummary[]>(`/api/v1/tontines/${tontineId}/rounds`);
@@ -65,6 +64,7 @@ export default function TontineDetailScreen() {
             {data.mailbox.unread > 0 ? (
               <Badge tone="brand" label={t('mailbox.unreadAlert', { count: data.mailbox.unread })} />
             ) : null}
+            {data.whatsappGroupUrl ? <WhatsAppChip url={data.whatsappGroupUrl} /> : null}
           </View>
 
           {/* Ma situation d'abord — caution et fond de caisse, avec le reste dû
@@ -115,18 +115,45 @@ export default function TontineDetailScreen() {
               <RoundRow key={round.id} tontineId={data.id} round={round} currency={data.currency} />
             ))}
           </View>
-
-          {data.whatsappGroupUrl ? (
-            <Button
-              label={t('tontine.whatsappGroup.open')}
-              variant="outline"
-              style={{ borderColor: theme.whatsapp }}
-              onPress={() => void Linking.openURL(data.whatsappGroupUrl as string)}
-            />
-          ) : null}
         </>
       ) : null}
     </Screen>
+  );
+}
+
+/**
+ * Le groupe WhatsApp, en puce parmi les étiquettes du groupe.
+ *
+ * C'était un bouton en pied d'écran, sous la liste des tours : il fallait
+ * dérouler tout le groupe pour le trouver, alors qu'on y va d'un réflexe, en
+ * arrivant. Sa place est en tête, avec ce qui décrit la tontine.
+ *
+ * Vert plein et non teinté comme les autres étiquettes : c'est la seule de la
+ * ligne sur laquelle on appuie, et le vert de WhatsApp est ce qui l'annonce.
+ */
+/** Encre de la puce : le vert de WhatsApp ne change pas de thème, son texte non
+    plus. Le noir tient le contraste sur ce vert clair, là où le blanc du mode
+    sombre l'aurait perdu. */
+const CHIP_INK = '#0b0b0b';
+
+function WhatsAppChip({ url }: { url: string }) {
+  const t = useT();
+  const theme = useTheme();
+
+  return (
+    <Pressable
+      accessibilityRole="link"
+      accessibilityLabel={t('tontine.whatsappGroup.open')}
+      onPress={() => void Linking.openURL(url)}
+      style={({ pressed }) => [
+        styles.chip,
+        { backgroundColor: theme.whatsapp },
+        pressed && styles.chipPressed,
+      ]}
+    >
+      <Ionicons name="logo-whatsapp" size={14} color={CHIP_INK} />
+      <ThemedText style={styles.chipLabel}>{t('mobile.whatsappChip')}</ThemedText>
+    </Pressable>
   );
 }
 
@@ -181,7 +208,19 @@ function RoundRow({
 }
 
 const styles = StyleSheet.create({
-  badges: { flexDirection: 'row', flexWrap: 'wrap', gap: Spacing.two },
+  badges: { flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', gap: Spacing.two },
+  // Mêmes hauteur et rayon qu'une `Badge` : la puce est pleine là où l'étiquette
+  // est bordée, la ligne doit rester droite malgré tout.
+  chip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
+    borderRadius: Radius.full,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: 3,
+  },
+  chipPressed: { opacity: 0.85 },
+  chipLabel: { fontFamily: Fonts.medium, fontSize: 12, lineHeight: 16, color: CHIP_INK },
   section: { gap: Spacing.three },
   roundHead: { flexDirection: 'row', alignItems: 'center', gap: Spacing.two },
 });

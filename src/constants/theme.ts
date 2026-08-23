@@ -40,7 +40,11 @@ const palette = {
      */
     success: '#047857',
     warning: '#b45309',
-    /** Vert officiel de WhatsApp : identique dans les deux thèmes. */
+    /**
+     * Vert officiel de WhatsApp, identique dans les deux thèmes — donc porté par
+     * un texte noir et non par la couleur du thème : sur ce vert clair, le blanc
+     * du mode sombre serait illisible.
+     */
     whatsapp: '#25d366',
   },
   dark: {

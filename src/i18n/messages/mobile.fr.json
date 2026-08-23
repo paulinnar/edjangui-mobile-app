@@ -26,6 +26,7 @@
       "memberScope": "Cette application n'affiche que vos données de membre, même si votre compte administre une tontine."
     },
     "members": "{count, plural, =0 {Aucun membre} one {# membre} other {# membres}}",
+    "whatsappChip": "Groupe",
     "roundMonth": "Mois du tour"
   },
   "common": {

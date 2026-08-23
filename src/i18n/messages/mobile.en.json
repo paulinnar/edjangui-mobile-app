@@ -26,6 +26,7 @@
       "memberScope": "This app only shows your member data, even if your account administers a tontine."
     },
     "members": "{count, plural, =0 {No members} one {# member} other {# members}}",
+    "whatsappChip": "Group",
     "roundMonth": "Round month"
   },
   "common": {
