@@ -1,6 +1,7 @@
 import { router } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
 
+import { CommitmentsSection } from '@/components/commitments-section';
 import { Screen } from '@/components/screen';
 import { ThemedText } from '@/components/themed-text';
 import { Badge } from '@/components/ui/badge';
@@ -9,7 +10,7 @@ import { EmptyState, ErrorState, LoadingState } from '@/components/ui/states';
 import { Spacing } from '@/constants/theme';
 import { useFormat } from '@/hooks/use-format';
 import { useT } from '@/i18n';
-import type { ApiTontineSummary } from '@/lib/api/contract';
+import type { ApiCommitment, ApiTontineSummary } from '@/lib/api/contract';
 import { useQuery } from '@/lib/api/use-query';
 
 /**
@@ -21,27 +22,46 @@ import { useQuery } from '@/lib/api/use-query';
  */
 export default function TontinesScreen() {
   const t = useT();
-  const { data, loading, refreshing, error, refresh } = useQuery<ApiTontineSummary[]>(
-    '/api/v1/tontines',
-  );
+
+  const commitments = useQuery<ApiCommitment[]>('/api/v1/me/commitments');
+  const tontines = useQuery<ApiTontineSummary[]>('/api/v1/tontines');
+
+  const refresh = () => {
+    commitments.refresh();
+    tontines.refresh();
+  };
+
+  const data = tontines.data;
+  const nothingLoaded = !commitments.data && !data;
+  const error = tontines.error ?? commitments.error;
 
   return (
     <Screen
-      title={t('nav.tontines')}
-      subtitle={data ? t('tontine.list.subtitle', { count: data.length }) : undefined}
-      refreshing={refreshing}
+      title={t('dashboard.title')}
+      refreshing={commitments.refreshing || tontines.refreshing}
       onRefresh={refresh}
     >
-      {loading ? <LoadingState /> : null}
-      {error && !data ? <ErrorState error={error} onRetry={refresh} /> : null}
+      {(tontines.loading || commitments.loading) && nothingLoaded ? <LoadingState /> : null}
+      {error && nothingLoaded ? <ErrorState error={error} onRetry={refresh} /> : null}
 
-      {data?.length === 0 ? (
-        <EmptyState icon="people-outline" message={t('dashboard.empty.description')} />
+      {commitments.data ? <CommitmentsSection commitments={commitments.data} /> : null}
+
+      {data ? (
+        <View style={styles.section}>
+          <View style={styles.sectionHead}>
+            <ThemedText type="subtitle">{t('nav.tontines')}</ThemedText>
+            <ThemedText type="small" themeColor="mutedForeground">
+              {t('tontine.list.subtitle', { count: data.length })}
+            </ThemedText>
+          </View>
+
+          {data.length === 0 ? (
+            <EmptyState icon="people-outline" message={t('dashboard.empty.description')} />
+          ) : (
+            data.map((tontine) => <TontineCard key={tontine.id} tontine={tontine} />)
+          )}
+        </View>
       ) : null}
-
-      {data?.map((tontine) => (
-        <TontineCard key={tontine.id} tontine={tontine} />
-      ))}
     </Screen>
   );
 }
@@ -97,6 +117,8 @@ function TontineCard({ tontine }: { tontine: ApiTontineSummary }) {
 }
 
 const styles = StyleSheet.create({
+  section: { gap: Spacing.three },
+  sectionHead: { gap: 2 },
   titleRow: { flexDirection: 'row', alignItems: 'flex-start', gap: Spacing.two },
   name: { flex: 1 },
   badges: { flexDirection: 'row', flexWrap: 'wrap', gap: Spacing.two },

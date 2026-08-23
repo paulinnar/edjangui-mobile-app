@@ -39,6 +39,14 @@ export default function TontineDetailScreen() {
   const data = detail.data;
   const money = (amount: number) => format.currency(amount, data?.currency ?? 'XAF');
 
+  // Les brouillons ne sont pas montrés : un tour qui n'a pas démarré n'appelle
+  // aucune cotisation, et le mobile n'expose aucune écriture qui permettrait
+  // d'en faire quoi que ce soit. Le filtre est ici et non côté API : le web, lui,
+  // laisse un administrateur voir se préparer le tour suivant.
+  const otherRounds = rounds.data?.filter(
+    (round) => round.status !== 'DRAFT' && round.id !== data?.activeRound?.id,
+  );
+
   return (
     <Screen
       title={data?.name ?? t('nav.tontines')}
@@ -100,14 +108,12 @@ export default function TontineDetailScreen() {
 
           <View style={styles.section}>
             <ThemedText type="subtitle">{t('rounds.title')}</ThemedText>
-            {rounds.data?.length === 0 ? (
+            {otherRounds?.length === 0 ? (
               <EmptyState icon="calendar-outline" message={t('rounds.empty')} />
             ) : null}
-            {rounds.data
-              ?.filter((round) => round.id !== data.activeRound?.id)
-              .map((round) => (
-                <RoundRow key={round.id} tontineId={data.id} round={round} currency={data.currency} />
-              ))}
+            {otherRounds?.map((round) => (
+              <RoundRow key={round.id} tontineId={data.id} round={round} currency={data.currency} />
+            ))}
           </View>
 
           {data.whatsappGroupUrl ? (
