@@ -14,7 +14,13 @@ const palette = {
     brandSoft: '#fcaa2b',
     /** Blanc sur l'orange : le couple est fixe, il ne change pas de thème. */
     brandForeground: '#ffffff',
-    background: '#ffffff',
+    /**
+     * Le fond du thème clair est **gris**, quand les cartes restent blanches :
+     * c'est ce qui les détache. Avec un fond blanc, une carte ne se distinguait
+     * que par sa bordure, et une liste entière se lisait comme une seule
+     * surface. Le thème sombre tient déjà cet écart par ses deux gris.
+     */
+    background: '#f9f9f9',
     foreground: '#120c08',
     card: '#ffffff',
     cardForeground: '#120c08',
