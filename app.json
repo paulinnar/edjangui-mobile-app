@@ -52,14 +52,15 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "a7446c8b-68cb-495d-92f0-0a4ffa862e14"
+        "projectId": "d65061fb-5700-42f1-a924-bb61ad375ef8"
       }
     },
     "runtimeVersion": {
       "policy": "appVersion"
     },
     "updates": {
-      "url": "https://u.expo.dev/a7446c8b-68cb-495d-92f0-0a4ffa862e14"
-    }
+      "url": "https://u.expo.dev/d65061fb-5700-42f1-a924-bb61ad375ef8"
+    },
+    "owner": "paulinnarcisse"
   }
 }
