@@ -45,6 +45,11 @@
     "eslint-config-expo": "~57.0.1",
     "typescript": "~6.0.3"
   },
+  "overrides": {
+    "@emnapi/core": "1.10.0",
+    "@emnapi/runtime": "1.10.0",
+    "@emnapi/wasi-threads": "1.2.3"
+  },
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
