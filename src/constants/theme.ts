@@ -14,7 +14,13 @@ const palette = {
     brandSoft: '#fcaa2b',
     /** Blanc sur l'orange : le couple est fixe, il ne change pas de thème. */
     brandForeground: '#ffffff',
-    background: '#ffffff',
+    /**
+     * Le fond du thème clair est **gris**, quand les cartes restent blanches :
+     * c'est ce qui les détache. Avec un fond blanc, une carte ne se distinguait
+     * que par sa bordure, et une liste entière se lisait comme une seule
+     * surface. Le thème sombre tient déjà cet écart par ses deux gris.
+     */
+    background: '#f9f9f9',
     foreground: '#120c08',
     card: '#ffffff',
     cardForeground: '#120c08',
@@ -26,7 +32,19 @@ const palette = {
     accentForeground: '#501a00',
     border: '#e7ded7',
     destructive: '#e7000b',
-    /** Vert officiel de WhatsApp : identique dans les deux thèmes. */
+    /**
+     * Constats de cotisation. L'app web les prend directement dans la palette
+     * Tailwind (`emerald-700`, `amber-700` en clair ; les variantes `-400` en
+     * sombre) plutôt que dans ses tokens de marque : on transpose donc les
+     * mêmes valeurs, sans chercher à les rattacher à la charte.
+     */
+    success: '#047857',
+    warning: '#b45309',
+    /**
+     * Vert officiel de WhatsApp, identique dans les deux thèmes — donc porté par
+     * un texte noir et non par la couleur du thème : sur ce vert clair, le blanc
+     * du mode sombre serait illisible.
+     */
     whatsapp: '#25d366',
   },
   dark: {
@@ -46,6 +64,8 @@ const palette = {
     /** `oklch(0.78 0.06 60 / 16%)` côté web : l'alpha est porté ici. */
     border: '#d5af9129',
     destructive: '#ff6467',
+    success: '#34d399',
+    warning: '#fbbf24',
     whatsapp: '#25d366',
   },
 } as const;
@@ -91,6 +111,12 @@ export const Radius = {
   xl: 14,
   '2xl': 18,
   '3xl': 22,
+  /**
+   * Pilule : la valeur dépasse toujours la moitié de la hauteur, ce qui donne
+   * des extrémités parfaitement demi-circulaires quelle que soit la taille du
+   * contrôle. Réservée à ce qui se touche — boutons, onglets, pastilles.
+   */
+  full: 999,
 } as const;
 
 export const MaxContentWidth = 720;

@@ -15,6 +15,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
+import { SplashView } from '@/components/splash-view';
 import { Colors } from '@/constants/theme';
 import { useThemeName } from '@/hooks/use-theme';
 import { PreferencesProvider, usePreferences } from '@/lib/preferences';
@@ -57,7 +58,10 @@ function Navigation({ fontsLoaded }: { fontsLoaded: boolean }) {
     if (ready) void SplashScreen.hideAsync();
   }, [ready]);
 
-  if (!ready) return null;
+  // Le fond animé plutôt qu'un écran vide : le démarrage natif couvre le
+  // lancement à froid, celui-ci couvre la lecture des polices, des préférences
+  // et de la session — et les rechargements, où le natif est déjà retombé.
+  if (!ready) return <SplashView />;
 
   // Le thème de React Navigation pilote le fond des transitions et des écrans
   // non peints : sans lui, un éclair blanc traverse chaque navigation en sombre.

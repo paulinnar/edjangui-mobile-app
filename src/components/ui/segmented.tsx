@@ -62,7 +62,9 @@ const styles = StyleSheet.create({
   track: {
     flexDirection: 'row',
     borderWidth: 1,
-    borderRadius: Radius.lg,
+    // Piste et segments partagent la pilule : un rail arrondi qui contiendrait
+    // des segments à angles vifs laisserait voir le décalage dans les coins.
+    borderRadius: Radius.full,
     padding: Spacing.one,
     gap: Spacing.one,
   },
@@ -71,7 +73,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     minHeight: 40,
-    borderRadius: Radius.md,
+    borderRadius: Radius.full,
   },
   label: { fontFamily: Fonts.medium, fontSize: 14 },
 });

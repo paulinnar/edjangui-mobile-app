@@ -7,14 +7,12 @@
     "icon": "./assets/images/icon.png",
     "scheme": "edjangui",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
     "ios": {
       "bundleIdentifier": "com.pynsoft.edjangui",
       "supportsTablet": true
     },
     "android": {
       "package": "com.pynsoft.edjangui",
-      "edgeToEdgeEnabled": true,
       "adaptiveIcon": {
         "backgroundColor": "#fc6c0f",
         "foregroundImage": "./assets/images/android-icon-foreground.png"
@@ -30,7 +28,7 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#f9f9f9",
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 160,
           "dark": {
@@ -41,11 +39,28 @@
         }
       ],
       "expo-secure-store",
-      "expo-localization"
+      "expo-localization",
+      "expo-font",
+      "expo-image",
+      "expo-status-bar",
+      "expo-web-browser"
     ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "d65061fb-5700-42f1-a924-bb61ad375ef8"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/d65061fb-5700-42f1-a924-bb61ad375ef8"
+    },
+    "owner": "paulinnarcisse"
   }
 }

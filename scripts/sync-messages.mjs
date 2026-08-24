@@ -1,9 +1,10 @@
 /**
- * Recopie les catalogues de traduction de l'app web dans le mobile.
+ * Recopie de l'app web ce que le mobile doit refléter à l'identique : les
+ * catalogues de traduction et le contrat de l'API.
  *
- * Les deux clients affichent les mêmes libellés ; l'app web reste la source.
- * `next-intl` ne tourne pas sous React Native, mais le format des fichiers est
- * du JSON ICU standard, lu tel quel par `src/i18n/index.tsx`.
+ * L'app web est la source des deux. Les libellés, parce que les deux clients
+ * disent la même chose ; le contrat, parce qu'une divergence de forme doit être
+ * une erreur de compilation et non un écran vide à l'exécution.
  *
  *   node scripts/sync-messages.mjs [chemin-du-repo-web]
  */
@@ -23,4 +24,10 @@ if (!existsSync(source)) {
 for (const file of ['fr.json', 'en.json']) {
   copyFileSync(join(source, file), join(import.meta.dirname, '..', 'src', 'i18n', 'messages', file));
   console.log(`✓ ${file}`);
+}
+
+const contract = join(webRepo, 'src', 'lib', 'api', 'contract.ts');
+if (existsSync(contract)) {
+  copyFileSync(contract, join(import.meta.dirname, '..', 'src', 'lib', 'api', 'contract.ts'));
+  console.log('✓ api/contract.ts');
 }
